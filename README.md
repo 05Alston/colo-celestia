@@ -1,1 +1,11 @@
-# colo-celestia
+# Colo Celestia
+
+## About
+
+The frontend source code for Colosseum 2023 website.
+
+## Contributing
+
+1. Clone this repository.
+1. Run ` npm install ` to setup project.
+1. Finally run ` npm run dev ` to start the development server.
