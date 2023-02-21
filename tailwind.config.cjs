@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'WorkSans': 'Work Sans',
+      },
+    },
     screens: {
       'xl': {'max': '1200px'},
       'lg': {'max': '991px'},
