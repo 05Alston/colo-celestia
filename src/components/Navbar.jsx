@@ -40,7 +40,7 @@ const Navbar = () => {
             <img src={Logo} alt="Colosseum Logo" className='w-10 h-auto'/>
             <p className='text-4xl font-black text-white'><NavLink to="/">COLOSSEUM</NavLink></p>	
           </div>
-          <ul className='flex items-center md:hidden gap-7 text-white font-semibold'>
+          <ul className='flex items-center lg:text-base md:hidden gap-7 text-white font-semibold'>
             {links.map((link, index)=>(
               <li key={index}><NavLink to={link.route}>{link.title}</NavLink></li> 
             ))}
@@ -48,8 +48,8 @@ const Navbar = () => {
           <ul className='hidden md:flex items-center'>
             <li>
               <button type='button' className='flex items-center justify-center transition-all duration-200 active:scale-90 cursor-pointer relative pr-4' onClick={onTriggerPopup}>
-                <GiHamburgerMenu className={`absolute transition-all duration-100 ${popupState ? 'opacity-0 rotate-45': 'opacity-100 rotate-0'}`}/>
-                <IoClose className={`absolute transition-all duration-100 scale-110 ${popupState ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-45'}`}/>
+                <GiHamburgerMenu className={`absolute transition-all text-slate-50 duration-100 ${popupState ? 'opacity-0 rotate-45': 'opacity-100 rotate-0'}`}/>
+                <IoClose className={`absolute transition-all text-slate-50 duration-100 scale-110 ${popupState ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-45'}`}/>
               </button>
             </li>
             <li>
