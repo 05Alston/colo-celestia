@@ -7,4 +7,7 @@
   *{
     @apply font-WorkSans m-0 p-0 ;
   }
+  .hero{
+    @apply px-12 py-12 justify-start;
+  }
 }

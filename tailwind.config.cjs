@@ -18,5 +18,5 @@ module.exports = {
       'xs': {'max': '425px'},
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

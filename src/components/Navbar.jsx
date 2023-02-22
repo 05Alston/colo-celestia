@@ -3,12 +3,33 @@ import { NavLink } from 'react-router-dom';
 import Hamburger from './Hamburger';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
-import Logo from '../assets/colologoblack.webp';
+import Logo from '../assets/colologo.webp';
 
 const Navbar = () => {
   const [popupState, setPopupState] = useState(false);
   const onTriggerPopup = () => setPopupState(!popupState);
-
+  const links = [
+    {
+      'route':'/',
+      'title':'Home'
+    },
+    {
+      'route':'/events',
+      'title':'Events'
+    },
+    {
+      'route':'/workshops',
+      'title':'Workshops'
+    },
+    {
+      'route':'/sponsors',
+      'title':'Sponsors'
+    },
+    {
+      'route':'/colonite',
+      'title':'Colo-Nite'
+    },
+  ]
   return (
    <>
    {/* TODO: Fix Seam between navbar and hamburger menus */}
@@ -17,14 +38,12 @@ const Navbar = () => {
         <nav className='flex items-center justify-between w-[95vw] m-auto text-2xl'>
           <div className='flex'>
             <img src={Logo} alt="Colosseum Logo" className='w-10 h-auto'/>
-            <p className='text-4xl font-black'><NavLink to="/">COLOSSEUM</NavLink></p>	
+            <p className='text-4xl font-black text-white'><NavLink to="/">COLOSSEUM</NavLink></p>	
           </div>
-          <ul className='flex items-center md:hidden gap-7'>
-            <li><NavLink to="/route">title</NavLink></li> 
-            <li><NavLink to="/route">title</NavLink></li> 
-            <li><NavLink to="/route">title</NavLink></li> 
-            <li><NavLink to="/route">title</NavLink></li> 
-            <li><NavLink to="/route">title</NavLink></li> 
+          <ul className='flex items-center md:hidden gap-7 text-white font-semibold'>
+            {links.map((link, index)=>(
+              <li key={index}><NavLink to={link.route}>{link.title}</NavLink></li> 
+            ))}
           </ul>
           <ul className='hidden md:flex items-center'>
             <li>
@@ -38,7 +57,7 @@ const Navbar = () => {
           </ul>
         </nav>
       </header>
-      <Hamburger popupState={popupState} setPopupState={setPopupState}/>
+      <Hamburger links={links} popupState={popupState} setPopupState={setPopupState}/>
    </>
   )
 }
