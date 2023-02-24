@@ -1,52 +1,56 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ReactDOMServer from 'react-dom/server';
 import { Navbar, Footer } from './components';
 import { Homepage } from './pages';
+import { useEffect } from 'react';
+import { BsPlay, BsLink45Deg } from 'react-icons/bs';
 
 function App() {
-  const trailer = document.getElementById("trailer");
+  useEffect(()=>{
+    const getTrailerClass = type => {
+      switch(type) {
+        case "video":
+          return <BsPlay/>;
+        case "link":
+          return <BsLink45Deg/>;
+        default:
+          return ""; 
+      }
+    }
+    const trailer = document.getElementById("trailer");
+    window.onmousemove = e => {
+      const interactable = e.target.closest(".interactable"),
+      interacting = interactable !== null;
+      
+      animateTrailer(e, interacting);
+      const content = document.getElementById("content");
+      trailer.setAttribute("data-type","");
+      content.innerHTML = "";
+      if(interacting) {
+        trailer.setAttribute("data-type",interactable.getAttribute("datatype"));
+        content.innerHTML = ReactDOMServer.renderToString(getTrailerClass(interactable.getAttribute("datatype")));
+      }
+    }
+    const animateTrailer = (e, interacting) => {
+      
+      const x = e.clientX - trailer.offsetWidth / 2;
+      const y = e.clientY - trailer.offsetHeight / 2;
+      
+      const keyframes = {
+        transform: `translate(${x}px, ${y}px) scale(${interacting ? 3 : 1})`
+      }
+      
+      trailer.animate(keyframes, { 
+        duration: 300, 
+        fill: "forwards" 
+      });
+    }
+  })
 
-  // const animateTrailer = (e, interacting) => {
-  //   const x = e.clientX - trailer.offsetWidth / 2,
-  //         y = e.clientY - trailer.offsetHeight / 2;
-    
-  //   const keyframes = {
-  //     transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
-  //   }
-    
-  //   trailer.animate(keyframes, { 
-  //     duration: 800, 
-  //     fill: "forwards" 
-  //   });
-  // }
-  // window.onmousemove = e => {
-  //   const interactable = e.target.closest(".interactable"),
-  //         interacting = interactable !== null;
-    
-  //   const content = document.getElementById("content");
-    
-  //   animateTrailer(e, interacting);
-    
-  //   trailer.dataset.type = interacting ? interactable.dataset.type : "";
-    
-  //   if(interacting) {
-  //     content.innerHTML = getTrailerClass(interactable.dataset.type);
-  //   }
-  // }
-
-  // const getTrailerClass = type => {
-  //   switch(type) {
-  //     case "video":
-  //       return "Play";
-  //     case "link":
-  //       return "Register";
-  //     default:
-  //       return ""; 
-  //   }
-  // }
   return (
     <BrowserRouter> 
-      <div id="trailer" onMouseMove={e=>{}}>
-        <div id="content"></div>
+      <div id="trailer">
+        <div id="content" className='text-gray-700'></div>
       </div>
       <Navbar/>
       <Routes>

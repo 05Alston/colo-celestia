@@ -33,14 +33,14 @@ const Navbar = () => {
   return (
    <>
    {/* TODO: Fix Seam between navbar and hamburger menus */}
-   <header className={`transition-all duration-300 ${popupState ? 'backdrop-blur-none' : "backdrop-blur-sm backdrop-opacity-100"} flex items-center h-[9vh] bg-opacity-100 fixed top-0 left-0 right-0 opacity-100 z-50
+   <header className={`transition-all duration-300 ${popupState ? 'backdrop-blur-none' : "backdrop-blur-sm backdrop-opacity-100"} flex items-center h-[9vh] bg-opacity-5 fixed top-0 left-0 right-0 opacity-100 z-50 bg-white
       `}>
         <nav className='flex items-center justify-between w-[95vw] m-auto text-2xl'>
           <div className='flex'>
-            <img src={Logo} alt="Colosseum Logo" className='w-10 h-auto'/>
-            <p className='text-4xl font-black text-white'><NavLink to="/">COLOSSEUM</NavLink></p>	
+            <img src={Logo} alt="Colosseum Logo" className='w-10 h-auto pr-2'/>
+            <p className='text-3xl font-black text-white uppercase'><NavLink to="/">Colosseum</NavLink></p>	
           </div>
-          <ul className='flex items-center lg:text-base md:hidden gap-7 text-white font-semibold'>
+          <ul className='flex items-center lg:text-base md:hidden gap-7 text-white font-semibold uppercase'>
             {links.map((link, index)=>(
               <li key={index}><NavLink to={link.route}>{link.title}</NavLink></li> 
             ))}

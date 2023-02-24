@@ -8,29 +8,21 @@
     @apply font-WorkSans m-0 p-0 ;
   }
   #root:hover > #trailer {
-    opacity: 1;
+    @apply opacity-100;
   }
   
   #trailer {
-    height: 20px;
-    width: 20px;
-    background-color: white;
-    border-radius: 50%;
-    
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: 1000;
-    
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 500ms ease;
-    
-    display: grid;
-    place-items: center;
+    @apply h-5 w-5 bg-white rounded-full fixed z-[100] pointer-events-none opacity-0 transition-all ease-in-out grid place-items-center border-solid;    
   }
 
   .btn {
     @apply cursor-pointer select-none border-transparent text-center rounded-lg h-12 min-h-[3rem] uppercase border-2 duration-200 text-slate-50 inline-flex flex-wrap flex-shrink-0 justify-center items-center px-4 mt-10 text-sm font-semibold transition-all ease-btn;
+  }
+  
+  #trailer:not([data-type=""]) > #content {
+    @apply opacity-100;
+  }
+  #content {
+    @apply block opacity-0 transition-opacity duration-150 ease-linear;
   }
 }
