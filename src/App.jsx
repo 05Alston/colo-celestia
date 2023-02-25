@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ReactDOMServer from 'react-dom/server';
 import { Navbar } from './components';
-import { About, Homepage, Events, Error } from './pages';
+import { About, Homepage, Events, Error, StarryLandscape } from './pages';
 import { useEffect } from 'react';
 import { BsPlay } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -68,7 +68,7 @@ function App() {
         <Route path="/talks/:slug" element={<div className='pt-40'>Talking and stuff</div>}/>
         <Route path="/workshops/:slug" element={<div className='pt-40'>Working the heck off</div>}/>
         <Route path="/competitions/:slug" element={<div className='pt-40'>Working the heck off</div>}/>
-        <Route path="/colonite" element={<div className='pt-40'>Party!!!!</div>}/>
+        <Route path="/colonight" element={<StarryLandscape/>}/>
         <Route path="*" element={<Error/>}/>
       </Routes>
     </BrowserRouter>
