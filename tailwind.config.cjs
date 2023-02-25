@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'WorkSans': 'Work Sans',
+        'Oswald': 'Oswald',
       },
       animation: {
         buttonPop: 'buttonPop .25s ease-out',
@@ -22,13 +23,9 @@ module.exports = {
           'to': { transform: 'scale(1)' },
         },
       },
-    },
-    screens: {
-      'xl': {'max': '1200px'},
-      'lg': {'max': '991px'},
-      'md': {'max': '767px'},
-      'sm': {'max': '550px'},
-      'xs': {'max': '425px'},
+      screens: {
+        'xs': '425px',
+      },
     },
   },
   plugins: [],

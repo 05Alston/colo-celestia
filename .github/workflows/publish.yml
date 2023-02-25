@@ -1,9 +1,9 @@
 name: Generate a build and push to main branch
 
-on:
-  push:
-    branches:
-      - source
+# on:
+#   push:
+#     branches:
+#       - source
 
 jobs:
   build:

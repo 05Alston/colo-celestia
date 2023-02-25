@@ -14,6 +14,10 @@ const Navbar = () => {
       'title':'Home'
     },
     {
+      'route':'/about',
+      'title':'About'
+    },
+    {
       'route':'/events',
       'title':'Events'
     },
@@ -33,21 +37,20 @@ const Navbar = () => {
   return (
    <>
    {/* TODO: Fix Seam between navbar and hamburger menus */}
-   <header className={`transition-all duration-300 ${popupState ? 'backdrop-blur-none' : "backdrop-blur-sm backdrop-opacity-100"} flex items-center h-[9vh] bg-opacity-5 fixed top-0 left-0 right-0 opacity-100 z-50 bg-white
-      `}>
-        <nav className='flex items-center justify-between w-[95vw] m-auto text-2xl'>
-          <div className='flex'>
-            <img src={Logo} alt="Colosseum Logo" className='w-10 h-auto pr-2'/>
-            <p className='text-3xl font-black text-white uppercase'><NavLink to="/">Colosseum</NavLink></p>	
+   <header className={`transition-all duration-300 ${popupState ? 'backdrop-blur-none' : "backdrop-blur-sm backdrop-opacity-100"} flex items-center h-[9vh] bg-opacity-0 fixed top-0 left-0 right-0 opacity-100 z-50`}>
+        <nav className='flex items-center justify-between w-[95vw] m-auto'>
+          <div className='flex items-center'>
+            <img src={Logo} alt="Colosseum Logo" className='h-12 aspect-square pr-2'/>
+            <NavLink to="/"><p className='lg:text-4xl md:text-3xl text-4xl font-black text-white uppercase font-WorkSans'>Colosseum</p></NavLink>	
           </div>
-          <ul className='flex items-center lg:text-base md:hidden gap-7 text-white font-semibold uppercase'>
+          <ul className='items-center text-xl lg:text-2xl hidden md:flex lg:gap-7 gap-4 text-white font-extrabold'>
             {links.map((link, index)=>(
-              <li key={index}><NavLink to={link.route}>{link.title}</NavLink></li> 
+              <li key={index}><NavLink to={link.route}><p className="font-Oswald">{link.title}</p></NavLink></li> 
             ))}
           </ul>
-          <ul className='hidden md:flex items-center'>
+          <ul className='md:hidden flex items-center'>
             <li>
-              <button type='button' className='flex items-center justify-center transition-all duration-200 active:scale-90 cursor-pointer relative pr-4' onClick={onTriggerPopup}>
+              <button type='button' className='flex items-center justify-center transition-all duration-200 active:scale-90 cursor-pointer relative pr-4 interactable' onClick={onTriggerPopup}  datatype={`${popupState ? 'open' : 'close'}`}>
                 <GiHamburgerMenu className={`absolute transition-all text-slate-50 duration-100 ${popupState ? 'opacity-0 rotate-45': 'opacity-100 rotate-0'}`}/>
                 <IoClose className={`absolute transition-all text-slate-50 duration-100 scale-110 ${popupState ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-45'}`}/>
               </button>

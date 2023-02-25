@@ -3,7 +3,10 @@ import ReactDOMServer from 'react-dom/server';
 import { Navbar, Footer } from './components';
 import { Homepage } from './pages';
 import { useEffect } from 'react';
-import { BsPlay, BsLink45Deg } from 'react-icons/bs';
+import { BsPlay } from 'react-icons/bs';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoClose } from 'react-icons/io5';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 function App() {
   useEffect(()=>{
@@ -12,7 +15,11 @@ function App() {
         case "video":
           return <BsPlay/>;
         case "link":
-          return <BsLink45Deg/>;
+          return <FaExternalLinkAlt className='text-[0.25rem]'/>;
+        case "open":
+          return <IoClose/>;
+        case "close":
+          return <GiHamburgerMenu/>;
         default:
           return ""; 
       }
@@ -49,8 +56,8 @@ function App() {
 
   return (
     <BrowserRouter> 
-      <div id="trailer">
-        <div id="content" className='text-gray-700'></div>
+      <div id="trailer" className='hidden lg:grid'>
+        <div id="content" className='text-gray-700 text-[0.5rem]'></div>
       </div>
       <Navbar/>
       <Routes>
