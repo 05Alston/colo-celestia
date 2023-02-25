@@ -27,4 +27,7 @@
   .btn {
     @apply cursor-pointer select-none border-transparent text-center rounded-lg h-12 min-h-[3rem] uppercase border-2 duration-200 text-slate-50 inline-flex flex-wrap flex-shrink-0 justify-center items-center px-4 mt-10 text-sm font-semibold transition-all ease-btn;
   }
+  .badge {
+    @apply h-5 w-fit rounded-full px-2 text-sm font-WorkSans font-light;
+  }
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { DateLoc, Speaker, Sponsor } from '../components';
+import { DateLoc, Speaker, Sponsor, Footer } from '../components';
 import { NavLink } from 'react-router-dom';
 import { HiChevronRight } from 'react-icons/hi'
 
@@ -67,7 +67,8 @@ const Homepage = () => {
 					</div>
 				</div>
 			</section>
-			
+			<Footer/>
+
 		</div>
 	)
 }

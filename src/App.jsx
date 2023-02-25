@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ReactDOMServer from 'react-dom/server';
-import { Navbar, Footer } from './components';
-import { Homepage } from './pages';
+import { Navbar } from './components';
+import { About, Homepage, Events, Error } from './pages';
 import { useEffect } from 'react';
 import { BsPlay } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -62,15 +62,15 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Homepage/>}/>
-        <Route path="/tech-summit" element={<div>Summit</div>}/>
-        <Route path="/events" element={<div>Events</div>}/>
-        <Route path="/talks/:slug" element={<div>Talking and stuff</div>}/>
-        <Route path="/workshops/:slug" element={<div>Working the heck off</div>}/>
-        <Route path="/competitions/:slug" element={<div>Working the heck off</div>}/>
-        <Route path="/colonite" element={<div>Party!!!!</div>}/>
-        <Route path="*" element={<div>Wrong place</div>}/>
+        {/* <Route path="/tech-summit" element={<div>Summit</div>}/> */}
+        <Route path="/about" element={<About/>}/>
+        <Route path="/events" element={<Events/>}/>
+        <Route path="/talks/:slug" element={<div className='pt-40'>Talking and stuff</div>}/>
+        <Route path="/workshops/:slug" element={<div className='pt-40'>Working the heck off</div>}/>
+        <Route path="/competitions/:slug" element={<div className='pt-40'>Working the heck off</div>}/>
+        <Route path="/colonite" element={<div className='pt-40'>Party!!!!</div>}/>
+        <Route path="*" element={<Error/>}/>
       </Routes>
-      <Footer/>
     </BrowserRouter>
   )
 }

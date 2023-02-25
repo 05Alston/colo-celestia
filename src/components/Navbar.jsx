@@ -30,14 +30,13 @@ const Navbar = () => {
       'title':'Sponsors'
     },
     {
-      'route':'/colonite',
-      'title':'Colo-Nite'
+      'route':'/colonight',
+      'title':'Colo Night'
     },
   ]
   return (
    <>
-   {/* TODO: Fix Seam between navbar and hamburger menus */}
-   <header className={`transition-all duration-300 ${popupState ? 'backdrop-blur-none' : "backdrop-blur-sm backdrop-opacity-100"} flex items-center h-[9vh] bg-opacity-0 fixed top-0 left-0 right-0 opacity-100 z-50`}>
+   <header className={`transition-all duration-300 ${popupState ? 'backdrop-blur-none' : "backdrop-blur-sm backdrop-opacity-100"} flex items-center h-[9vh] py-4 bg-opacity-0 fixed top-0 left-0 right-0 opacity-100 z-50`}>
         <nav className='flex items-center justify-between w-[95vw] m-auto'>
           <div className='flex items-center'>
             <img src={Logo} alt="Colosseum Logo" className='h-12 aspect-square pr-2'/>
