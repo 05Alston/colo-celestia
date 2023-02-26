@@ -6,7 +6,7 @@ import { HiChevronRight } from 'react-icons/hi'
 const Homepage = () => {
 	const [effect, setEffect] = useState(false);
 	return (
-		<div className=' text-slate-100 bg-slate-800'>
+		<div className='text-slate-100 bg-slate-800'>
 			{/* Hero section */}
 			<section className="grid px-12 md:pb-20 justify-start md:place-items-end min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto">
 				<div>
@@ -57,13 +57,13 @@ const Homepage = () => {
 				<p className="text-5xl md:text-7xl font-black font-Oswald uppercase">Sponsors</p>
 				<div className="container mx-auto animate-pulse">
 					<div className="grid grid-cols-1 gap-8 mt-16 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:mt-20 xl:gap-12">
-						<Sponsor/>
-						<Sponsor/>
-						<Sponsor/>
-						<Sponsor/>
-						<Sponsor/>
-						<Sponsor/>
-						<Sponsor/>
+						<Sponsor page={'sponsor'}/>
+						<Sponsor page={'sponsor'}/>
+						<Sponsor page={'sponsor'}/>
+						<Sponsor page={'sponsor'}/>
+						<Sponsor page={'sponsor'}/>
+						<Sponsor page={'sponsor'}/>
+						<Sponsor page={'sponsor'}/>
 					</div>
 				</div>
 			</section>
