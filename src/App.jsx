@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server';
 import { Navbar } from './components';
 import { About, Homepage, Events, Error, Sponsors } from './pages';
 import { useEffect } from 'react';
-import { BsPlay } from 'react-icons/bs';
+import { BsPlay, BsImage } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
 import { FaExternalLinkAlt } from 'react-icons/fa';
@@ -14,6 +14,8 @@ function App() {
       switch(type) {
         case "video":
           return <BsPlay/>;
+        case "image":
+          return <BsImage/>;
         case "link":
           return <FaExternalLinkAlt className='text-[0.25rem]'/>;
         case "open":

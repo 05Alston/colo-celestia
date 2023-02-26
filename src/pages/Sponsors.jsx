@@ -7,14 +7,14 @@ const Sponsors = () => {
             <section className=" md:px-12 pb-20 max-w-[110rem] mx-auto">
                 <p className="px-6 md:px-0 text-5xl md:text-7xl font-black font-Oswald uppercase">Sponsors</p>
                 <div className='grid place-items-center animate-pulse'>
-				<Sponsor page={'sponsor'}/>
-				<Sponsor page={'sponsor'}/>
-				<Sponsor page={'sponsor'}/>
-				<Sponsor page={'sponsor'}/>
-				<Sponsor page={'sponsor'}/>
-				<Sponsor page={'sponsor'}/>
-				<Sponsor page={'sponsor'}/>
-			</div>
+					<Sponsor page={'sponsor'}/>
+					<Sponsor page={'sponsor'}/>
+					<Sponsor page={'sponsor'}/>
+					<Sponsor page={'sponsor'}/>
+					<Sponsor page={'sponsor'}/>
+					<Sponsor page={'sponsor'}/>
+					<Sponsor page={'sponsor'}/>
+				</div>
             </section>
             <Footer/>
         </div>

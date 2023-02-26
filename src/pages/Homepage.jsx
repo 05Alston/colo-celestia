@@ -29,7 +29,7 @@ const Homepage = () => {
 					<NavLink to="/">
 						<button id="btn" className={`interactable btn bg-gray-900 gap-2 ${effect && 'animate-buttonPop'}`} datatype="link" onClick={() => setEffect(true)} onAnimationEnd={() => setEffect(false)}>
 							<HiChevronRight className='text-3xl aspect-square'/>
-							Button
+							Get Tickets
 						</button>
 					</NavLink>
 				</div>
@@ -57,18 +57,19 @@ const Homepage = () => {
 				<p className="text-5xl md:text-7xl font-black font-Oswald uppercase">Sponsors</p>
 				<div className="container mx-auto animate-pulse">
 					<div className="grid grid-cols-1 gap-8 mt-16 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:mt-20 xl:gap-12">
-						<Sponsor page={'sponsor'}/>
-						<Sponsor page={'sponsor'}/>
-						<Sponsor page={'sponsor'}/>
-						<Sponsor page={'sponsor'}/>
-						<Sponsor page={'sponsor'}/>
-						<Sponsor page={'sponsor'}/>
-						<Sponsor page={'sponsor'}/>
+						<Sponsor page={'home'}/>
+						<Sponsor page={'home'}/>
+						<Sponsor page={'home'}/>
+						<Sponsor page={'home'}/>
+						<Sponsor page={'home'}/>
+						<Sponsor page={'home'}/>
+						<Sponsor page={'home'}/>
+						<Sponsor page={'home'}/>
+						<Sponsor page={'home'}/>
 					</div>
 				</div>
 			</section>
 			<Footer/>
-
 		</div>
 	)
 }
