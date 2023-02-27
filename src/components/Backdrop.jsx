@@ -29,8 +29,9 @@ const Backdrop = () => {
             scene.add(stars);
         };
         const loop = () => {
-            stars.rotation.y -= 0.0002;
-            stars.rotation.x -= 0.0003;
+            stars.rotation.y -= 0.0004;
+            stars.rotation.x -= 0.0006
+            ;
             renderer.render(scene, camera);
             requestAnimationFrame(loop);
         }
@@ -49,7 +50,7 @@ const Backdrop = () => {
         loop();
     })
   return (
-    <div  className="w-full absolute opacity-30 overflow-hidden">
+    <div  className="w-full absolute opacity-30 overflow-hidden -z-50">
         <canvas id="canvas">
         {/* <div className='w-full h-screen bg-black opacity-100 z-10'></div> */}
         </canvas>

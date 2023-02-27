@@ -1,9 +1,11 @@
 import React from 'react';
 import { VideoCard, Footer } from '../components';
+import Bg from '../assets/backdrop.webp';
 
 const About = () => {
     return (
-        <div className=' text-slate-100 bg-space-bg'>
+        <div className=' text-slate-100 bg-space-bg relative z-0'>
+			{/* Header */}
 			<section className="grid px-12 md:pb-20 justify-start min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto">
 				<div>
 					<p className="text-5xl sm:text-7xl font-black font-Oswald uppercase">OUR HISTORY</p>
@@ -11,7 +13,10 @@ const About = () => {
 				</div>
 			</section>
 			{/* Gallery */}
-			<section className='max-w-[110rem] lg:px-6'>
+			<section className='max-w-[110rem] relative'>
+				<div className='w-full absolute -z-10'>
+						<img src={Bg} className="w-full h-[80rem]"/>
+				</div>
 				<div className="mx-auto px-3 mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
 					<div className="grid grid-cols-1 gap-4 py-4 lg:py-0 lg:gap-8">
 			          <div className="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg block">
