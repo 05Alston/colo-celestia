@@ -3,7 +3,7 @@ import { EventCard, Footer } from '../components';
 
 const Events = () => {
     return (
-        <div className=' text-slate-100 bg-slate-800'>
+        <div className=' text-slate-100 bg-space-bg'>
             <div className='h-[33vh] w-full '></div>
             <section className=" md:px-12 pb-20 max-w-[110rem] mx-auto">
                 <p className="px-6 md:px-0 text-5xl md:text-7xl font-black font-Oswald uppercase">Events</p>

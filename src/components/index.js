@@ -1,3 +1,4 @@
+export { default as Backdrop } from './Backdrop.jsx';
 export { default as DateLoc } from './DateLoc.jsx';
 export { default as EventCard } from './EventCard.jsx';
 export {  default as Footer } from './Footer.jsx';

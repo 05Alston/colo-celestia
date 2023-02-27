@@ -3,7 +3,7 @@ import { VideoCard, Footer } from '../components';
 
 const About = () => {
     return (
-        <div className=' text-slate-100 bg-slate-800'>
+        <div className=' text-slate-100 bg-space-bg'>
 			<section className="grid px-12 md:pb-20 justify-start min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto">
 				<div>
 					<p className="text-5xl sm:text-7xl font-black font-Oswald uppercase">OUR HISTORY</p>

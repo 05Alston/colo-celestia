@@ -16,6 +16,9 @@ module.exports = {
       transitionTimingFunction: {
         'btn': 'cubic-bezier(.4,0,.2,1)',
       },
+      colors: {
+        'space-bg': '#030405',
+      },
       keyframes: {
         buttonPop: {
           '0%': { transform: 'scale(1))' },

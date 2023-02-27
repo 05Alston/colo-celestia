@@ -6,7 +6,7 @@
 
 @layer base{
   *{
-    @apply font-WorkSans m-0 p-0 ;
+    @apply font-WorkSans m-0 p-0 select-none;
   }
   #root:hover > #trailer {
     @apply opacity-100;
