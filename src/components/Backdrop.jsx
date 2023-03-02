@@ -50,7 +50,7 @@ const Backdrop = () => {
         loop();
     })
   return (
-    <div  className="w-full absolute opacity-30 overflow-hidden -z-50">
+    <div  className="w-full fixed opacity-30 overflow-hidden -z-50">
         <canvas id="canvas">
         {/* <div className='w-full h-screen bg-black opacity-100 z-10'></div> */}
         </canvas>

@@ -1,10 +1,11 @@
 import React from 'react';
-import { VideoCard, Footer } from '../components';
+import { VideoCard, Footer, Backdrop } from '../components';
 import Bg from '../assets/backdrop.webp';
 
 const About = () => {
     return (
         <div className=' text-slate-100 bg-space-bg relative z-0'>
+			<Backdrop/>
 			{/* Header */}
 			<section className="grid px-12 md:pb-20 justify-start min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto">
 				<div>
