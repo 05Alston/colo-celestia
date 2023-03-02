@@ -1,8 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ReactDOMServer from 'react-dom/server';
 import { Navbar, Trailer } from './components';
 import { About, Colonight, Homepage, Events, Error, Sponsors } from './pages';
-import { useEffect } from 'react';
 
 function App() {
   

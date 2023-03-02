@@ -18,7 +18,7 @@ const About = () => {
 				<div className='w-full absolute -z-10'>
 						<img src={Bg} className="w-full h-[80rem]"/>
 				</div>
-				<div className="mx-auto px-3 mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+				<div className="mx-auto px-3 lg:pt-8 mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
 					<div className="grid grid-cols-1 gap-4 py-4 lg:py-0 lg:gap-8">
 			          <div className="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg block">
 				          <div className="w-full aspect-video lg:h-full bg-gray-600 animate-pulse interactable" datatype='image'></div>
