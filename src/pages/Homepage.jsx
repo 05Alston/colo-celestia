@@ -1,12 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 import { DateLoc, Speaker, Sponsor, Footer, Backdrop } from '../components';
 import { NavLink } from 'react-router-dom';
 import { HiChevronRight } from 'react-icons/hi';
 import { BsPlay } from 'react-icons/bs';
-import Bg from '../assets/backdrop.webp';
 
 const Homepage = () => {
 	const [effect, setEffect] = useState(false);
+	const [loading, setLoading] = useState(true);
+	const [sponsorDetails, setSponsorDetails] = useState([]);
+	useEffect(()=> {
+		async function getDetails() {
+			setLoading(true);
+			// window.scrollTo(0, 0);
+			let res = await axios.get('http://localhost:1337/api/sponsors/?populate=*');
+			console.log(res.data.data);
+			setSponsorDetails(res.data.data);
+			setLoading(false);
+		}
+		getDetails();
+	},[])
 	return (
 		<div className='text-slate-100 bg-space-bg relative z-0'>
 			<Backdrop/>
@@ -14,14 +27,13 @@ const Homepage = () => {
 			<section className="grid md:pb-20 justify-start md:place-items-end min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto relative">
 				<div className='md:px-12 sm:px-8 px-3'>
 					<p className="text-5xl sm:text-7xl font-black font-Oswald uppercase">Celestia</p>
-					<p className="lg:py-6 md:text-3xl text-xl">Land of infinite possibilites.</p>
+					<p className="lg:py-6 md:text-3xl text-xl">Infinite opportunities, Endless horizons.</p>
 					<DateLoc date={"today"} location={"Here"}/>
 				</div>
 			</section>
 			{/* Throwback */}
 			<section className='flex gap-20 justify-between lg:items-start items-center flex-col lg:flex-row max-w-[110rem] mx-auto relative'>
-				<div className='w-full absolute -z-10'>
-					<img src={Bg} className="w-full h-[80rem]"/>
+				<div className='w-full absolute -z-10 h-[80rem] Bg bg-cover bg-bottom'>
 				</div>
 				<div className='mt-20 md:mx-12 sm:mx-8 mx-3 flex-initial lg:w-5/12 w-auto'>
 					<p className='md:text-sm text-xs font-semibold'>What we're about?</p>
@@ -49,15 +61,8 @@ const Homepage = () => {
 			{/* Featuring */}
 			<section className="px-12 pt-32 pb-20 max-w-[110rem] mx-auto">
 				<p className="text-5xl md:text-7xl font-black font-Oswald uppercase">Featuring</p>
-				<div className="container mx-auto animate-pulse">
+				<div className="container mx-auto">
 					<div className="grid grid-cols-1 gap-8 mt-16 xl:mt-20 xl:gap-12 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3">
-						<Speaker/>
-						<Speaker/>
-						<Speaker/>
-						<Speaker/>
-						<Speaker/>
-						<Speaker/>
-						<Speaker/>
 						<Speaker/>
 					</div>
 				</div>
@@ -65,17 +70,16 @@ const Homepage = () => {
 			{/* Sponsors */}
 			<section className="px-12 pt-32 pb-20 max-w-[110rem] mx-auto">
 				<p className="text-5xl md:text-7xl font-black font-Oswald uppercase">Sponsors</p>
-				<div className="container mx-auto animate-pulse">
+				<div className={`container mx-auto ${loading ? 'animate-pulse' : ''}`}>
 					<div className="grid grid-cols-1 place-items-center gap-8 mt-16 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:mt-20 xl:gap-12">
-						<Sponsor page={'home'}/>
-						<Sponsor page={'home'}/>
-						<Sponsor page={'home'}/>
-						<Sponsor page={'home'}/>
-						<Sponsor page={'home'}/>
-						<Sponsor page={'home'}/>
-						<Sponsor page={'home'}/>
-						<Sponsor page={'home'}/>
-						<Sponsor page={'home'}/>
+						{loading && (
+							<div>Hii</div>
+						)}
+						{!loading && (
+							sponsorDetails.map((sponsor)=> (
+									<Sponsor key={sponsor['attributes']['Logo']['data']['attributes']['name']} page={'home'} image={sponsor['attributes']['Logo']['data']['attributes']['formats']['thumbnail']['url']} />
+								))
+						)}
 					</div>
 				</div>
 			</section>

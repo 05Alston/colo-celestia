@@ -20,36 +20,37 @@ const About = () => {
 				</div>
 				<div className="mx-auto px-3 lg:pt-8 mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
 					<div className="grid grid-cols-1 gap-4 py-4 lg:py-0 lg:gap-8">
-			          <div className="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg block">
-				          <div className="w-full aspect-video lg:h-full bg-gray-600 animate-pulse interactable" datatype='image'></div>
+			          <div className="overflow-hidden rounded-lg block">
+				          <div className="w-full aspect-video lg:h-full bg-entrage bg-gray-400 bg-cover bg-blend-multiply hover:bg-blend-normal interactable" datatype='image'>
+						  </div>
 			          </div>
 			          <div className="grid grid-cols-2 gap-4 lg:gap-8">
-			            <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-gray-600 animate-pulse interactable" datatype='image'></div>
+			            <div className="overflow-hidden rounded-lg">
+			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-entrage bg-gray-400 bg-cover bg-blend-multiply hover:bg-blend-normal interactable" datatype='image'></div>
 			            </div>
-			            <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-gray-600 animate-pulse interactable" datatype='image'></div>
+			            <div className="overflow-hidden rounded-lg">
+			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-entrage bg-gray-400 bg-cover bg-blend-multiply hover:bg-blend-normal interactable" datatype='image'></div>
 			            </div>
 			          </div>
 					</div>
-		          <div className="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
-		            <div className="w-full aspect-square lg:h-full bg-gray-600 animate-pulse interactable" datatype='image'></div>
+		          <div className="sm:overflow-hidden sm:rounded-lg">
+		            <div className="w-full aspect-3/4 bg-speaker1 bg-gray-400 bg-cover bg-blend-multiply hover:bg-blend-normal interactable" datatype='image'></div>
 		          </div>
 		        </div>
 				<div className="mx-auto px-3 mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-		          <div className="aspect-w-4 pb-4 lg:pb-0 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
-		            <div className="w-full aspect-square lg:h-full bg-gray-600 animate-pulse interactable" datatype='image'></div>
+		          <div className="pb-4 lg:pb-0 sm:overflow-hidden sm:rounded-lg">
+		            <div className="w-full aspect-square bg-speaker2 bg-gray-400 bg-cover bg-blend-multiply hover:bg-blend-normal interactable" datatype='image'></div>
 		          </div>
 					<div className="grid grid-cols-1 gap-4 lg:gap-8">
-			          <div className="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg block">
-				          <div className="w-full aspect-video lg:h-full bg-gray-600 animate-pulse interactable" datatype='image'></div>
+			          <div className="overflow-hidden rounded-lg block">
+				          <div className="w-full aspect-video lg:h-full  bg-entrage bg-gray-400 bg-cover bg-blend-multiply hover:bg-blend-normal interactable" datatype='image'></div>
 			          </div>
 			          <div className="grid grid-cols-2 gap-4 lg:gap-8">
-			            <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-gray-600 animate-pulse interactable" datatype='image'></div>
+			            <div className="overflow-hidden rounded-lg">
+			              <div className="w-full aspect-square lg:aspect-video lg:h-full  bg-entrage bg-gray-400 bg-cover bg-blend-multiply hover:bg-blend-normal interactable" datatype='image'></div>
 			            </div>
-			            <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-gray-600 animate-pulse interactable" datatype='image'></div>
+			            <div className="overflow-hidden rounded-lg">
+			              <div className="w-full aspect-square lg:aspect-video lg:h-full  bg-entrage bg-gray-400 bg-cover bg-blend-multiply hover:bg-blend-normal interactable" datatype='image'></div>
 			            </div>
 			          </div>
 					</div>

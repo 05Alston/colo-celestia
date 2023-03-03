@@ -3,7 +3,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Speaker = () => {
   return (
-    <div className="w-full mt-20 interactable" datatype='link'>
+    <div className="w-full mt-20 interactable animate-pulse" datatype='link'>
       <div className="w-full h-96 rounded-lg bg-gray-600 grid place-items-end">
         <FaExternalLinkAlt className='lg:hidden text-white m-4'/>
       </div>

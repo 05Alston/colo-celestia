@@ -7,7 +7,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'colonight' : 'url("./src/assets/colonite.webp")'
+        'colonight' : 'url("./src/assets/colonite.webp")',
+        'entrage' : 'url("./src/assets/entrage.webp")',
+        'speaker1' : 'url("./src/assets/speaker1.webp")',
+        'speaker2' : 'url("./src/assets/speaker2.webp")',
       },
       fontFamily: {
         'WorkSans': 'Work Sans',
@@ -21,6 +24,9 @@ module.exports = {
       },
       colors: {
         'space-bg': '#030405',
+      },
+      aspectRatio: {
+        '3/4': '3 / 4',
       },
       keyframes: {
         buttonPop: {
