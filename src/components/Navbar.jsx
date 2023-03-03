@@ -36,14 +36,14 @@ const Navbar = () => {
         <nav className='flex items-center justify-between w-[95vw] m-auto'>
           <div className='flex items-center'>
             <img src={Logo} alt="Colosseum Logo" className='h-12 aspect-square pr-2'/>
-            <NavLink to="/"><p className='lg:text-4xl md:text-3xl text-4xl font-black text-white uppercase font-WorkSans'>Colosseum</p></NavLink>	
+            <NavLink to="/"><p className='text-4xl lg:text-3xl md:text-4xl font-black text-white uppercase font-WorkSans'>Colosseum</p></NavLink>	
           </div>
-          <ul className='items-center text-xl lg:text-2xl md:hidden flex lg:gap-7 gap-4 text-white font-extrabold'>
+          <ul className='items-center text-xl lg:text-2xl hidden md:flex lg:gap-7 gap-4 text-white font-extrabold'>
             {links.map((link, index)=>(
               <li key={index}><NavLink to={link.route}><p className="font-Oswald">{link.title}</p></NavLink></li> 
             ))}
           </ul>
-          <ul className='hidden md:flex items-center'>
+          <ul className='md:hidden flex items-center'>
             <li>
               <button type='button' className='flex items-center justify-center transition-all duration-200 active:scale-90 cursor-pointer relative pr-4 interactable' onClick={onTriggerPopup}  datatype={`${popupState ? 'open' : 'close'}`}>
                 <GiHamburgerMenu className={`absolute transition-all text-2xl text-slate-50 duration-100 ${popupState ? 'opacity-0 rotate-45': 'opacity-100 rotate-0'}`}/>

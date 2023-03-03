@@ -1,19 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { HiChevronRight } from 'react-icons/hi';
 
 const Hamburger = ({ links, popupState, setPopupState }) => {
   const changeState = ()=> {
     setPopupState(!popupState);
   }
+    const [effect, setEffect] = useState(false);
   return (
    <>
       <nav className={`
-        fixed -top-[100vh] left-1/2 -translate-x-[50%] z-20 bg-white backdrop-blur-lg backdrop-opacity-100 bg-opacity-20 rounded-lg h-screen py-5 px-6 w-full hidden md:flex items-start justify-center transition-all duration-300 ${popupState ? 'opacity-100 top-0':'opacity-0 -top-[100vh]'}`}>
-
-        <ul className='flex items-center flex-col gap-11 text-4xl pt-16'>
+        fixed -left-0 top-0 z-20 bg-black text-white rounded-lg h-screen py-5 px-6 w-full flex md:hidden items-center justify-center transition-all duration-200 ${popupState ? 'left-0':'-left-[100%]'}`}>
+        <ul className='flex items-center flex-col gap-11 text-4xl pt-16 text-4xl lg:text-7xl font-black'>
           {links.map((link, index)=>(
-            <button onClick={changeState} key={index}><NavLink to={link.route}>{link.title}</NavLink></button> 
+            <li key={index}>
+              <NavLink to={link.route}>
+                <button onClick={changeState}>
+                  {link.title}
+                </button> 
+              </NavLink>
+            </li>
           ))}
+          <li>
+            <NavLink to="/">
+              <button id="btn" className={`interactable btn bg-gray-900 gap-2 ${effect && 'animate-buttonPop'}`} datatype="link" onClick={() => setEffect(true)} onAnimationEnd={() => setEffect(false)}>
+                <HiChevronRight className='text-3xl aspect-square'/>
+                Get Tickets
+              </button>
+            </NavLink>
+          </li>
         </ul>
 
       </nav>
