@@ -4,7 +4,7 @@ import { FiInstagram, FiFacebook, FiYoutube } from 'react-icons/fi';
 
 const Footer = () => {
   return (
-    <footer className="w-full grid place-items-start lg:place-items-center gap-10 text-sm lg:grid-cols-2 p-10 bg-gray-900">
+    <footer className="w-full grid place-items-start lg:place-items-center gap-10 text-sm lg:grid-cols-2 p-10 bg-gray-800">
       <div>
         <img src={Logo} className='w-20 mb-4 aspect-square' alt='colo logo'/>
         <p>Colosseum Ltd.<br/>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>

@@ -11,13 +11,18 @@ module.exports = {
         'entrage' : 'url("./src/assets/entrage.webp")',
         'speaker1' : 'url("./src/assets/speaker1.webp")',
         'speaker2' : 'url("./src/assets/speaker2.webp")',
+        'speaker3' : 'url("./src/assets/speaker3.webp")',
+        'player' : 'url("./src/assets/player.webp")',
+        'robot' : 'url("./src/assets/robot.webp")',
+        'colonight-alt' : 'url("./src/assets/colonight.webp")',
+        'decor' : 'url("./src/assets/colosseumdbit.webp")',
       },
       fontFamily: {
         'WorkSans': 'Work Sans',
         'Oswald': 'Oswald',
       },
       animation: {
-        ticketTear: 'tear 1s forwards',
+        ticketTear: 'tear 0.8s forwards ease-out',
         buttonPop: 'buttonPop .25s ease-out',
       },
       transitionTimingFunction: {
@@ -33,8 +38,9 @@ module.exports = {
         tear: {
           '0%': { transform: 'rotate(0deg)' },
           '40%': { transform: 'rotate(6deg)' },
-          '60%': { transform: 'rotate(5deg)' },
-          'to': { transform: 'translateY(100vh); '}
+          '50%': { transform: 'rotate(5deg)' },
+          '60%': { transform: 'translateY(10vh) rotate(5deg)' },
+          'to': { transform: 'translateY(80vh) rotate(5deg)' },
         },
         buttonPop: {
           '0%': { transform: 'scale(1))' },

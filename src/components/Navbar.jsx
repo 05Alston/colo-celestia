@@ -32,7 +32,7 @@ const Navbar = () => {
   ]
   return (
    <>
-   <header className={`transition-all duration-300 flex items-center py-1 bg-sky-500 fixed top-0 left-0 right-0 opacity-100 z-50`}>
+   <header className={`transition-all duration-300 flex items-center py-1 bg-space-bg border-b-[1px] border-gray-900 border-solid fixed top-0 left-0 right-0 opacity-100 z-50`}>
         <nav className='flex items-center justify-between w-[95vw] m-auto'>
           <div className='flex items-center'>
             <img src={Logo} alt="Colosseum Logo" className='h-12 aspect-square pr-2'/>

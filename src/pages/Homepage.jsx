@@ -13,7 +13,7 @@ const Homepage = () => {
 	useEffect(()=> {
 		async function getDetails() {
 			setLoading(true);
-			// window.scrollTo(0, 0);
+			window.scrollTo(0, 0);
 			let res = await axios.get('http://localhost:1337/api/sponsors/?populate=*');
 			console.log(res.data.data.attributes.Logo.data.attributes);
 			setSponsorDetails(res.data.data.attributes.Logo.data.attributes);
@@ -77,8 +77,8 @@ const Homepage = () => {
 				<div className={`container mx-auto ${loading ? 'animate-pulse' : ''}`}>
 					<div className="grid grid-cols-1 gap-8 mt-16 xl:mt-20 xl:gap-12 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3">
 						{loading && (
-							[...Array(7)].map((idx)=>(
-								<Speaker key={idx} loading={loading}/>))
+							[...Array(7)].map((x, index)=>(
+								<Speaker key={index} loading={loading}/>))
 						)}
 						{!loading && (
 							speakerDetails.map((speaker, index)=> (
@@ -94,12 +94,12 @@ const Homepage = () => {
 				<div className={`container mx-auto ${loading ? 'animate-pulse' : ''}`}>
 					<div className="grid grid-cols-1 place-items-center gap-8 mt-16 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:mt-20 xl:gap-12">
 						{loading && (
-							[...Array(8)].map((idx)=>(
-								<Sponsor key={idx} loading={loading}/>))
+							[...Array(8)].map((x, index)=>(
+								<Sponsor key={index} loading={loading}/>))
 						)}
 						{!loading && (
-							sponsorDetails.map((sponsor)=> (
-									<Sponsor key={sponsor['name']} page={'home'} image={sponsor['formats']['thumbnail']['url']} section={null} loading={loading}/>
+							sponsorDetails.map((sponsor, index)=> (
+									<Sponsor key={index} section={null} loading={loading}/>
 								))
 						)}
 					</div>

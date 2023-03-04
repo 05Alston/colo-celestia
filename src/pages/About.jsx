@@ -4,8 +4,8 @@ import { VideoCard, Footer, Backdrop } from '../components';
 const About = () => {
     return (
         <div className=' text-slate-100 bg-space-bg relative z-0'>
-            <div className='h-[33vh] w-full '></div>
 			<Backdrop/>
+            <div className='h-[30vh] w-full '></div>
 			{/* Header */}
 			<section className="grid px-12 md:pb-20 justify-start min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto">
 				<div>
@@ -18,18 +18,19 @@ const About = () => {
 			<section className='max-w-[110rem] relative'>
 				<div className='w-full absolute -z-10 h-full Bg bg-cover bg-bottom'>
 				</div>
-				<div className="mx-auto px-3 pt-16 mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+				<p className="text-5xl sm:text-7xl py-8 font-black font-Oswald uppercase pt-16">Gallery</p>
+				<div className="mx-auto px-3 mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
 					<div className="grid grid-cols-1 gap-4 py-4 lg:py-0 lg:gap-8">
 			          <div className="overflow-hidden rounded-lg block">
-				          <div className="w-full aspect-video lg:h-full bg-entrage bg-gray-400 bg-cover interactable" datatype='image'>
+				          <div className="w-full aspect-video lg:h-full bg-decor bg-center bg-gray-400 bg-cover interactable" datatype='image'>
 						  </div>
 			          </div>
 			          <div className="grid grid-cols-2 gap-4 lg:gap-8">
 			            <div className="overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-entrage bg-gray-400 bg-cover interactable" datatype='image'></div>
+			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-robot bg-center bg-gray-400 bg-cover interactable" datatype='image'></div>
 			            </div>
 			            <div className="overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-entrage bg-gray-400 bg-cover interactable" datatype='image'></div>
+			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-player bg-center bg-gray-400 bg-cover interactable" datatype='image'></div>
 			            </div>
 			          </div>
 					</div>
@@ -43,14 +44,14 @@ const About = () => {
 		          </div>
 					<div className="grid grid-cols-1 gap-4 lg:gap-8">
 			          <div className="overflow-hidden rounded-lg block">
-				          <div className="w-full aspect-video lg:h-full  bg-entrage bg-gray-400 bg-cover interactable" datatype='image'></div>
+				          <div className="w-full aspect-video lg:h-full bg-speaker3 bg-right bg-gray-400 bg-cover interactable" datatype='image'></div>
 			          </div>
 			          <div className="grid grid-cols-2 gap-4 lg:gap-8">
 			            <div className="overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full  bg-entrage bg-gray-400 bg-cover interactable" datatype='image'></div>
+			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-colonight-alt bg-gray-400 bg-cover interactable" datatype='image'></div>
 			            </div>
 			            <div className="overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full  bg-entrage bg-gray-400 bg-cover interactable" datatype='image'></div>
+			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-entrage bg-gray-400 bg-cover interactable" datatype='image'></div>
 			            </div>
 			          </div>
 					</div>
