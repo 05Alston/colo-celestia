@@ -18,7 +18,7 @@ const About = () => {
 			<section className='max-w-[110rem] relative'>
 				<div className='w-full absolute -z-10 h-full Bg bg-cover bg-bottom'>
 				</div>
-				<p className="text-5xl sm:text-7xl py-8 font-black font-Oswald uppercase pt-16">Gallery</p>
+				<p className="text-5xl px-6 sm:text-7xl py-8 font-black font-Oswald uppercase pt-16">Gallery</p>
 				<div className="mx-auto px-3 mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
 					<div className="grid grid-cols-1 gap-4 py-4 lg:py-0 lg:gap-8">
 			          <div className="overflow-hidden rounded-lg block">

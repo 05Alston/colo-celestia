@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { DateLoc, Speaker, Sponsor, Footer, Backdrop } from '../components';
+import { DateLoc, Speaker, Sponsor, Footer, Backdrop, Intro } from '../components';
 import { NavLink } from 'react-router-dom';
 import { HiChevronRight } from 'react-icons/hi';
 import { BsPlay } from 'react-icons/bs';
@@ -10,6 +10,7 @@ const Homepage = () => {
 	const [loading, setLoading] = useState(true);
 	const [sponsorDetails, setSponsorDetails] = useState([]);
 	const [speakerDetails, setSpeakerDetails] = useState([]);
+	
 	useEffect(()=> {
 		async function getDetails() {
 			setLoading(true);
@@ -19,12 +20,16 @@ const Homepage = () => {
 			setSponsorDetails(res.data.data.attributes.Logo.data.attributes);
 			res = await axios.get('http://localhost:1337/api/speakers/?populate=*');
 			console.log(res.data.data);
+			setSpeakerDetails(res.data.data.attributes.Logo.data.attributes);
 			setLoading(false);
 		}
 		getDetails();
 	},[])
 	return (
 		<div className='text-slate-100 bg-space-bg relative z-0'>
+			<div className='z-50'>
+				<Intro/>
+			</div>
 			<Backdrop/>
 			{/* Hero section */}
 			<section className="grid md:pb-20 justify-start md:place-items-end min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto relative">
@@ -58,7 +63,7 @@ const Homepage = () => {
 				<div className='md:mt-20 md:mx-12 sm:mx-8 mx-3 md:w-[700px] w-11/12 aspect-video rounded-xl bg-gray-800 text-slate-50 bg-opacity-60 flex-grow interactable grid place-items-center' datatype='video'>
 {/*					<video id="video" preload="" autoplay="" muted="" playsinline="" loop="false">
 				        <source src="https://www.youtube.com/embed/E7wJTI-1dvQ" type="video/mp4"/>
-				      </video>
+						</video>
 */}					{/*<iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
 				        title='video'
 				        className='w-full h-full rounded-xl'

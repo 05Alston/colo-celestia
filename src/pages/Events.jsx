@@ -24,7 +24,7 @@ const Events = () => {
                     <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
                     <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
                     <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>                    
+                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
                 </div>
             </section>
             <Footer/>
