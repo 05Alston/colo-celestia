@@ -5,5 +5,7 @@ export {  default as Footer } from './Footer.jsx';
 export { default as Navbar } from './Navbar.jsx';
 export { default as Speaker } from './Speaker.jsx';
 export { default as Sponsor } from './Sponsor.jsx';
+export { default as TicketH } from './TicketH.jsx';
+export { default as TicketV } from './TicketV.jsx';
 export { default as Trailer } from './Trailer.jsx';
 export { default as VideoCard } from './VideoCard.jsx';

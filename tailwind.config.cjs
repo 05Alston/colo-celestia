@@ -17,6 +17,7 @@ module.exports = {
         'Oswald': 'Oswald',
       },
       animation: {
+        ticketTear: 'tear 1s forwards',
         buttonPop: 'buttonPop .25s ease-out',
       },
       transitionTimingFunction: {
@@ -29,6 +30,12 @@ module.exports = {
         '3/4': '3 / 4',
       },
       keyframes: {
+        tear: {
+          '0%': { transform: 'rotate(0deg)' },
+          '40%': { transform: 'rotate(6deg)' },
+          '60%': { transform: 'rotate(5deg)' },
+          'to': { transform: 'translateY(100vh); '}
+        },
         buttonPop: {
           '0%': { transform: 'scale(1))' },
           '40%': { transform: 'scale(0.95)' },

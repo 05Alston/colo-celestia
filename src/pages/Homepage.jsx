@@ -25,7 +25,7 @@ const Homepage = () => {
 	},[])
 	return (
 		<div className='text-slate-100 bg-space-bg relative z-0'>
-			{/*<Backdrop/>*/}
+			<Backdrop/>
 			{/* Hero section */}
 			<section className="grid md:pb-20 justify-start md:place-items-end min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto relative">
 				<div className='md:px-12 sm:px-8 px-3'>
@@ -56,6 +56,16 @@ const Homepage = () => {
 				</div>
 				{/* Video */}
 				<div className='md:mt-20 md:mx-12 sm:mx-8 mx-3 md:w-[700px] w-11/12 aspect-video rounded-xl bg-gray-800 text-slate-50 bg-opacity-60 flex-grow interactable grid place-items-center' datatype='video'>
+{/*					<video id="video" preload="" autoplay="" muted="" playsinline="" loop="false">
+				        <source src="https://www.youtube.com/embed/E7wJTI-1dvQ" type="video/mp4"/>
+				      </video>
+*/}					{/*<iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
+				        title='video'
+				        className='w-full h-full rounded-xl'
+				        frameborder='0'
+				        allowfullscreen
+				        allow='autoplay; encrypted-media'
+					/>*/}
 					<div className='lg:hidden place-items-center text-gray-700 text-3xl aspect-square w-16 bg-white rounded-full grid'>
 						<BsPlay/>
 					</div>

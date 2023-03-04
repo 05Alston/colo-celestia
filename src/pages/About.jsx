@@ -60,9 +60,9 @@ const About = () => {
 			<section className="px-12 pt-40 min-h-screen pb-20 max-w-[110rem] mx-auto">
 				<p className="text-5xl md:text-7xl font-black font-Oswald uppercase">Blasts from the past</p>
 				<div className="container mx-auto pt-32 flex gap-10 flex-wrap justify-center">
-					<VideoCard/>
-					<VideoCard/>
-					<VideoCard/>
+					<VideoCard year={2022} url={''}/>
+					<VideoCard year={2021} url={''}/>
+					<VideoCard year={2020} url={''}/>
 				</div>
 			</section>
 			<Footer/>
