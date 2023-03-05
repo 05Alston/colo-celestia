@@ -7,7 +7,7 @@ import speaker3 from "../assets/speaker3.webp";
 import player from "../assets/player.webp";
 import robot from "../assets/robot.webp";
 import colonightAlt from "../assets/colonight.webp";
-import decor from "./assets/colosseumdbit.webp";
+import decor from "../assets/colosseumdbit.webp";
 import colo22 from '../assets/colosseum2022.mp4';
 import colo21 from '../assets/colosseum2021.mp4';
 import colo20 from '../assets/colosseum2020.mp4';
