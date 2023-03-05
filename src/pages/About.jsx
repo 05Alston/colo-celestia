@@ -32,51 +32,43 @@ const About = () => {
 				<p className="text-5xl px-6 sm:text-7xl py-8 font-black font-Oswald uppercase pt-16">Gallery</p>
 				<div className="mx-auto px-3 mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
 					<div className="grid grid-cols-1 gap-4 py-4 lg:py-0 lg:gap-8">
-			          <div className="rounded-lg block">
-				          <div className="w-full overflow-hidden aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
-				          	<img src={decor} alt="" className='bg-center bg-cover'/>
+			          <div className="rounded-lg overflow-hidden block">
+				          <div className="w-full aspect-video lg:h-full bg-gray-400 bg-center bg-cover interactable" style={{backgroundImage: `url(${decor})`}} datatype='image'>
 						  </div>
 			          </div>
 			          <div className="grid grid-cols-2 gap-4 lg:gap-8">
-			            <div className="rounded-lg">
-			              <div className="w-full overflow-hidden aspect-square lg:aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
-				          	<img src={robot} alt="" className='bg-center bg-cover'/>
+			            <div className="rounded-lg overflow-hidden">
+			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-gray-400 bg-center bg-cover interactable" style={{backgroundImage: `url(${robot})`}} datatype='image'>
 			              </div>
 			            </div>
-			            <div className="rounded-lg">
-			              <div className="w-full overflow-hidden aspect-square lg:aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
-				          	<img src={player} alt="" className='bg-center bg-cover'/>
+			            <div className=" rounded-lg overflow-hidden">
+			              <div className="w-full overflow-hidden aspect-square lg:aspect-video lg:h-full bg-gray-400 bg-center bg-cover interactable" style={{backgroundImage: `url(${player})`}} datatype='image'>
 			              </div>
 			            </div>
 			          </div>
 					</div>
-		          <div className="rounded-lg">
-		            <div className="w-full overflow-hidden aspect-3/4 bg-gray-400 interactable" datatype='image'>
-			            <img src={speaker1} alt="" className='bg-center bg-cover'/>
+		          <div className=" rounded-lg overflow-hidden">
+		            <div className="w-full overflow-hidden aspect-3/4 bg-gray-400 bg-center bg-cover interactable" style={{backgroundImage: `url(${speaker1})`}}  datatype='image'>
 					</div>
 		          </div>
 		        </div>
 				<div className="mx-auto px-3 pb-16 mt-4 lg:mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-		          <div className="pb-4 lg:pb-0 rounded-lg">
-		            <div className="w-full overflow-hidden aspect-square bg-gray-400 interactable" datatype='image'>
-			            <img src={speaker2} alt="" className='bg-top bg-cover'/>
+		          <div className="pb-4 lg:pb-0  rounded-lg overflow-hidden">
+		            <div className="w-full overflow-hidden aspect-square bg-gray-400 bg-center bg-cover interactable" style={{backgroundImage: `url(${speaker2})`}} datatype='image'>
 		            </div>
 		          </div>
 					<div className="grid grid-cols-1 gap-4 lg:gap-8">
-			          <div className="rounded-lg">
-				          <div className="w-full overflow-hidden aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
-  				            <img src={speaker3} alt="" className='bg-right bg-cover'/>
+			          <div className=" rounded-lg overflow-hidden">
+				          <div className="w-full overflow-hidden aspect-video lg:h-full bg-gray-400 bg-center bg-cover interactable" style={{backgroundImage: `url(${speaker3})`}} datatype='image'>
 				          </div>
 			          </div>
 			          <div className="grid grid-cols-2 gap-4 lg:gap-8">
-			            <div className="rounded-lg">
-			              <div className="w-full overflow-hidden aspect-square lg:aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
-			              	<img src={colonightAlt} alt="" className='bg-center bg-cover'/>
+			            <div className=" rounded-lg overflow-hidden">
+			              <div className="w-full overflow-hidden aspect-square lg:aspect-video lg:h-full bg-gray-400 bg-center bg-cover interactable" style={{backgroundImage: `url(${colonightAlt})`}} datatype='image'>
 			              </div>
 			            </div>
-			            <div className="rounded-lg">
-			              <div className="w-full overflow-hidden aspect-square lg:aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
-			              	<img src={entrage} alt="" className='bg-center bg-cover'/>
+			            <div className=" rounded-lg overflow-hidden">
+			              <div className="w-full overflow-hidden aspect-square lg:aspect-video lg:h-full bg-gray-400 bg-center bg-cover interactable" style={{backgroundImage: `url(${entrage})`}} datatype='image'>
 			              </div>
 			            </div>
 			          </div>
