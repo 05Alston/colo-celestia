@@ -3,7 +3,6 @@ import axios from 'axios';
 import { DateLoc, Speaker, Sponsor, Footer, Backdrop, Intro } from '../components';
 import { NavLink } from 'react-router-dom';
 import { HiChevronRight } from 'react-icons/hi';
-import { BsPlay } from 'react-icons/bs';
 import teaser from '../assets/colosseum2023.mp4';
 
 const Homepage = () => {
@@ -17,21 +16,20 @@ const Homepage = () => {
 			setLoading(true);
 			window.scrollTo(0, 0);
 			let res = await axios.get('http://localhost:1337/api/sponsors/?populate=*');
-			console.log(res.data.data.attributes.Logo.data.attributes);
-			setSponsorDetails(res.data.data.attributes.Logo.data.attributes);
+			setSponsorDetails(res.data.data);
 			res = await axios.get('http://localhost:1337/api/speakers/?populate=*');
 			console.log(res.data.data);
-			setSpeakerDetails(res.data.data.attributes.Logo.data.attributes);
+			setSpeakerDetails(res.data.data);
 			setLoading(false);
 		}
 		getDetails();
 	},[])
 	return (
 		<div className='text-slate-100 bg-space-bg relative z-0'>
-{/*			<div className='z-50'>
+			{/* <div className='z-50'>
 				<Intro/>
-			</div>
-*/}			<Backdrop/>
+			</div> */}
+			<Backdrop/>
 			{/* Hero section */}
 			<section className="grid md:pb-20 justify-start md:place-items-end min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto relative">
 				<div className='md:px-12 sm:px-8 px-3'>
@@ -62,7 +60,7 @@ const Homepage = () => {
 				</div>
 				{/* Video */}
 				<div className='md:mt-20 md:mx-12 sm:mx-8 mx-3 md:w-[700px] w-11/12 aspect-video rounded-xl bg-gray-800 text-slate-50 bg-opacity-60 flex-grow interactable grid place-items-center' datatype='video'>
-					<video preload="true" autoplay="false" muted="true" className='md:w-[700px] w-11/12 aspect-video rounded-xl' playsInline="" loop="false">
+					<video preload="true" autoPlay={true} muted={true} className='md:w-[700px] w-11/12 aspect-video rounded-xl' playsInline="" loop={true}>
 				        <source src={teaser} type="video/mp4"/>
 						</video>
 				</div>

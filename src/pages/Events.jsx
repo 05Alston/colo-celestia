@@ -1,7 +1,14 @@
 import React, { useState,useEffect } from 'react'
 import { EventCard, Footer } from '../components';
-import Poster from '../assets/arch-linux-poster.webp';
 import axios from 'axios';
+import Warli from '../assets/events/workshop/Warli.webp';
+import CANSAT from '../assets/events/workshop/CANSAT.webp';
+import EHCS from '../assets/events/workshop/Ethical-Hacking-&-Cyber-Security.webp';
+import Finance from '../assets/events/workshop/Finance.webp';
+import PaperMagic from '../assets/events/workshop/Paper-Magic.webp';
+import RoboWars from '../assets/events/workshop/Robo-Wars.webp';
+import Spark from '../assets/events/workshop/Spark-AR.webp';
+import Web3 from '../assets/events/workshop/Web-3-Blockchain.webp';
 
 const Events = () => {
     const [loading, setLoading] = useState(true);
@@ -30,7 +37,8 @@ const Events = () => {
                         time={'11:00 am - 01:00 pm'}
                         fee1={'₹50 per person'}
                         fee2={null}
-                        image={null} 
+                        team={null}
+                        image={Warli}
                         loading={false}
                         />
                     <EventCard 
@@ -41,7 +49,8 @@ const Events = () => {
                         time={'03:00 pm - 005:00 pm'}
                         fee1={'₹80 per person (CSI Member)'}
                         fee2={'₹100 per person (Not CSI Member)'}
-                        image={null} 
+                        team={null}
+                        image={Spark} 
                         loading={false}
                         />
                     <EventCard
@@ -52,7 +61,8 @@ const Events = () => {
                         time={'09:30 am - 11:00 am'}
                         fee1={'₹50 per person'}
                         fee2={null}
-                        image={null} 
+                        team={null}
+                        image={Web3} 
                         loading={false}
                         />
                     <EventCard
@@ -61,9 +71,10 @@ const Events = () => {
                         venue={'Seminar Hall'}
                         date={'13-14th March'}
                         time={'09:00 am - 01:00 pm'}
-                        fee1={'₹350 per person (IETE Member)'}
-                        fee2={'₹400 per person (Not IETE Member)'}
-                        image={null} 
+                        fee1={'₹370 per person (IETE Member)'}
+                        fee2={'₹400 per person (Non IETE Member)'}
+                        team={'5'}
+                        image={RoboWars} 
                         loading={false}
                         />
                     <EventCard
@@ -73,8 +84,9 @@ const Events = () => {
                         date={'13th March, 14th March'}
                         time={'09:00 am - 05:00 pm, 09:00 am - 01:00 pm'}
                         fee1={'₹1500 per team (IEEE Member)'}
-                        fee2={'₹2100 per team (Not IEEE Member)'}
-                        image={null} 
+                        fee2={'₹2100 per team (Non IEEE Member)'}
+                        team={'3'}
+                        image={CANSAT} 
                         loading={false}
                         />
                     <EventCard
@@ -83,9 +95,10 @@ const Events = () => {
                         venue={'Outside Mondini Hall'}
                         date={'10th March'}
                         time={'02:00 pm - 05:00 pm'}
-                        fee1={'150 per person'}
+                        fee1={'₹150 per person'}
                         fee2={null}
-                        image={null} 
+                        team={null}
+                        image={PaperMagic} 
                         loading={false}
                         />
                     <EventCard
@@ -94,9 +107,10 @@ const Events = () => {
                         venue={'Bosco Hall'}
                         date={'13-14th March'}
                         time={'12:00 pm - 03:00 pm'}
-                        fee1={'600 per person'}
+                        fee1={'₹600 per person'}
                         fee2={null}
-                        image={null} 
+                        team={null}
+                        image={EHCS} 
                         loading={false}
                         />
                     <EventCard 
@@ -105,9 +119,10 @@ const Events = () => {
                         venue={'Seminar Hall'}
                         date={'10-11th March'}
                         time={'10:00 am - 01:00 pm'}
-                        fee1={'50 per person'}
+                        fee1={'₹50 per person'}
                         fee2={null}
-                        image={null} 
+                        team={null}
+                        image={Finance} 
                         loading={false}
                         />
                     {/*{loading && (
@@ -118,13 +133,20 @@ const Events = () => {
                         workshopDetails.map((workshop, index)=> (
                             <EventCard
                             key={index} 
+                            
+                            date={'10-11th March'}
+                            time={'10:00 am - 01:00 pm'}
+                            fee1={'₹50 per person'}
+                            fee2={null}
+                            team={null}
+
                             title={workshop['attributes']['title']} 
                             category={workshop['attributes']['category']['data']['attributes']['Name']}
                             venue={workshop['attributes']['venue']}
                             speaker={workshop['attributes']['speaker']}
                             time={workshop['attributes']['date']}
                             fee={workshop['attributes']['price']}
-                            image={workshop['attributes']['poster']['data']['attributes']['formats']['medium']['url']} 
+                            image={`http://localhost:1337${workshop['attributes']['poster']['data']['attributes']['formats']['medium']['url']}`} 
                             loading={loading}
                             />
                         ))
