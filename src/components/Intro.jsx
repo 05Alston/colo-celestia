@@ -8,22 +8,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Intro = () => {
     const [value, setValue] = useState(1);
-    const heroScroller = gsap.timeline({
-        paused: true,
-        scrollTrigger: {
-          trigger: ".hero-header.h-1",
-          scroller: ".smooth-scroll",
-          pin: ".pin-wrapper",
-          start: "top 10%",
-          scrub: true,
-          end: "top 100vh",
-        },
-      });
+    // const heroScroller = gsap.timeline({
+    //     paused: true,
+    //     scrollTrigger: {
+    //       trigger: ".hero-header.h-1",
+    //       scroller: ".smooth-scroll",
+    //       pin: ".pin-wrapper",
+    //       start: "top 10%",
+    //       scrub: true,
+    //       end: "top 100vh",
+    //     },
+    //   });
+	const upperElement = document.querySelector(".upper");
+	const middleElement = document.querySelector(".middle");
+	const bottomElement = document.querySelector(".bottom");
+	const divElement = document.querySelector(".banner");
     useEffect(()=> {
-		const upperElement = document.querySelector(".upper");
-		const middleElement = document.querySelector(".middle");
-		const bottomElement = document.querySelector(".bottom");
-		const divElement = document.querySelector(".banner");
 		const update = () => {
             upperElement.style.scale = value * 0.05 + 1;
             middleElement.style.scale = value * 0.03 + 1;
@@ -43,8 +43,8 @@ const Intro = () => {
                 upperElement.style.opacity = 1;
             }
         }
-        update();
-	},[value])
+        // update();
+	})
   return (
     <div className="grid place-items-center overflow-x-hidden w-full h-screen" onScroll={setValue(()=>{return value < 0 ? 0 : window.scrollY})}>
 				<div className="h-screen w-full grid place-items-center fixed overflow-hidden top-0 left-0">

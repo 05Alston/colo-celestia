@@ -1,30 +1,134 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import { EventCard, Footer } from '../components';
 import Poster from '../assets/arch-linux-poster.webp';
+import axios from 'axios';
 
 const Events = () => {
+    const [loading, setLoading] = useState(true);
+    const [workshopDetails, setWorkshopDetails] = useState([]);
+    useEffect(()=> {
+        async function getDetails() {
+            setLoading(true);
+            window.scrollTo(0, 0);
+            let res = await axios.get('http://192.168.0.152:1337/api/events/?populate=*');
+            setWorkshopDetails(res.data.data);
+            setLoading(false);
+        }
+        getDetails();
+    },[])
     return (
         <div className=' text-slate-100 bg-space-bg'>
-            <div className='h-[33vh] w-full '></div>
+            <div className='h-[33vh] w-full'></div>
             <section className=" md:px-12 pb-20 max-w-[110rem] mx-auto">
                 <p className="px-6 md:px-0 text-5xl md:text-7xl font-black font-Oswald uppercase">Events</p>
                 <div className="container mx-auto grid place-items-center grid-cols-1 gap-8 mt-16 sm:gap-9 lg:gap-9 xl:mt-20 xl:gap-20 sm:grid-cols-2 lg:grid-cols-3">
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
-                    <EventCard title={"Event"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."} image={Poster} category={"Workshop"}/>
+                    <EventCard 
+                        title={'Warli Workshop'} 
+                        category={'Workshop'}
+                        venue={'Mech Drawing Hall 1'}
+                        date={'14th March'}
+                        time={'11:00 am - 01:00 pm'}
+                        fee1={'₹50 per person'}
+                        fee2={null}
+                        image={null} 
+                        loading={false}
+                        />
+                    <EventCard 
+                        title={'Spark AR Workshop'} 
+                        category={'Workshop'}
+                        venue={'EXTC Lab 4'}
+                        date={'13-14th March'}
+                        time={'03:00 pm - 005:00 pm'}
+                        fee1={'₹80 per person (CSI Member)'}
+                        fee2={'₹100 per person (Not CSI Member)'}
+                        image={null} 
+                        loading={false}
+                        />
+                    <EventCard
+                        title={'Web-3 Blockchain Workshop'} 
+                        category={'Workshop'}
+                        venue={'Computer Center'}
+                        date={'13th March'}
+                        time={'09:30 am - 11:00 am'}
+                        fee1={'₹50 per person'}
+                        fee2={null}
+                        image={null} 
+                        loading={false}
+                        />
+                    <EventCard
+                        title={'Robo Wars Workshop'} 
+                        category={'Workshop'}
+                        venue={'Seminar Hall'}
+                        date={'13-14th March'}
+                        time={'09:00 am - 01:00 pm'}
+                        fee1={'₹350 per person (IETE Member)'}
+                        fee2={'₹400 per person (Not IETE Member)'}
+                        image={null} 
+                        loading={false}
+                        />
+                    <EventCard
+                        title={'CANSAT Workshop'} 
+                        category={'Workshop'}
+                        venue={'Mondini Hall'}
+                        date={'13th March, 14th March'}
+                        time={'09:00 am - 05:00 pm, 09:00 am - 01:00 pm'}
+                        fee1={'₹1500 per team (IEEE Member)'}
+                        fee2={'₹2100 per team (Not IEEE Member)'}
+                        image={null} 
+                        loading={false}
+                        />
+                    <EventCard
+                        title={'Paper Magic Workshop'} 
+                        category={'Workshop'}
+                        venue={'Outside Mondini Hall'}
+                        date={'10th March'}
+                        time={'02:00 pm - 05:00 pm'}
+                        fee1={'150 per person'}
+                        fee2={null}
+                        image={null} 
+                        loading={false}
+                        />
+                    <EventCard
+                        title={'Ethical Hacking & Cybersecurity Workshop'} 
+                        category={'Workshop'}
+                        venue={'Bosco Hall'}
+                        date={'13-14th March'}
+                        time={'12:00 pm - 03:00 pm'}
+                        fee1={'600 per person'}
+                        fee2={null}
+                        image={null} 
+                        loading={false}
+                        />
+                    <EventCard 
+                        title={'Finance Workshop'} 
+                        category={'Workshop'}
+                        venue={'Seminar Hall'}
+                        date={'10-11th March'}
+                        time={'10:00 am - 01:00 pm'}
+                        fee1={'50 per person'}
+                        fee2={null}
+                        image={null} 
+                        loading={false}
+                        />
+                    {/*{loading && (
+                        [...Array(7)].map((x, index)=>(
+                            <EventCard key={index} loading={loading}/>))
+                    )}
+                    {!loading && (
+                        workshopDetails.map((workshop, index)=> (
+                            <EventCard
+                            key={index} 
+                            title={workshop['attributes']['title']} 
+                            category={workshop['attributes']['category']['data']['attributes']['Name']}
+                            venue={workshop['attributes']['venue']}
+                            speaker={workshop['attributes']['speaker']}
+                            time={workshop['attributes']['date']}
+                            fee={workshop['attributes']['price']}
+                            image={workshop['attributes']['poster']['data']['attributes']['formats']['medium']['url']} 
+                            loading={loading}
+                            />
+                        ))
+                    )}*/}
                 </div>
             </section>
             <Footer/>

@@ -1,5 +1,8 @@
 import React from 'react';
 import { VideoCard, Footer, Backdrop } from '../components';
+import colo22 from '../assets/colosseum2022.mp4';
+import colo21 from '../assets/colosseum2021.mp4';
+import colo20 from '../assets/colosseum2020.mp4';
 
 const About = () => {
     return (
@@ -61,9 +64,9 @@ const About = () => {
 			<section className="px-12 pt-40 min-h-screen pb-20 max-w-[110rem] mx-auto">
 				<p className="text-5xl md:text-7xl font-black font-Oswald uppercase">Blasts from the past</p>
 				<div className="container mx-auto pt-32 flex gap-10 flex-wrap justify-center">
-					<VideoCard year={2022} url={''}/>
-					<VideoCard year={2021} url={''}/>
-					<VideoCard year={2020} url={''}/>
+					<VideoCard year={2022} url={''} vid={colo22}/>
+					<VideoCard year={2021} url={''} vid={colo21}/>
+					<VideoCard year={2020} url={''} vid={colo20}/>
 				</div>
 			</section>
 			<Footer/>
