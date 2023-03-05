@@ -1,5 +1,13 @@
 import React from 'react';
 import { VideoCard, Footer, Backdrop } from '../components';
+import entrage from "../src/assets/entrage.webp";
+import speaker1 from "../src/assets/speaker1.webp";
+import speaker2 from "../src/assets/speaker2.webp";
+import speaker3 from "../src/assets/speaker3.webp";
+import player from "../src/assets/player.webp";
+import robot from "../src/assets/robot.webp";
+import colonightAlt from "../src/assets/colonight.webp";
+import decor from "./src/assets/colosseumdbit.webp";
 import colo22 from '../assets/colosseum2022.mp4';
 import colo21 from '../assets/colosseum2021.mp4';
 import colo20 from '../assets/colosseum2020.mp4';
@@ -24,37 +32,52 @@ const About = () => {
 				<p className="text-5xl px-6 sm:text-7xl py-8 font-black font-Oswald uppercase pt-16">Gallery</p>
 				<div className="mx-auto px-3 mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
 					<div className="grid grid-cols-1 gap-4 py-4 lg:py-0 lg:gap-8">
-			          <div className="overflow-hidden rounded-lg block">
-				          <div className="w-full aspect-video lg:h-full bg-decor bg-center bg-gray-400 bg-cover interactable" datatype='image'>
+			          <div className="rounded-lg block">
+				          <div className="w-full overflow-hidden aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
+				          	<img src={decor} alt="" className='bg-center bg-cover'/>
 						  </div>
 			          </div>
 			          <div className="grid grid-cols-2 gap-4 lg:gap-8">
-			            <div className="overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-robot bg-center bg-gray-400 bg-cover interactable" datatype='image'></div>
+			            <div className="rounded-lg">
+			              <div className="w-full overflow-hidden aspect-square lg:aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
+				          	<img src={robot} alt="" className='bg-center bg-cover'/>
+			              </div>
 			            </div>
-			            <div className="overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-player bg-center bg-gray-400 bg-cover interactable" datatype='image'></div>
+			            <div className="rounded-lg">
+			              <div className="w-full overflow-hidden aspect-square lg:aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
+				          	<img src={player} alt="" className='bg-center bg-cover'/>
+			              </div>
 			            </div>
 			          </div>
 					</div>
-		          <div className="overflow-hidden rounded-lg">
-		            <div className="w-full aspect-3/4 bg-speaker1 bg-gray-400 bg-cover bg-center interactable" datatype='image'></div>
+		          <div className="rounded-lg">
+		            <div className="w-full overflow-hidden aspect-3/4 bg-gray-400 interactable" datatype='image'>
+			            <img src={speaker1} alt="" className='bg-center bg-cover'/>
+					</div>
 		          </div>
 		        </div>
 				<div className="mx-auto px-3 pb-16 mt-4 lg:mt-8 max-w-2xl sm:px-6 grid gid-cols-1 lg:max-w-full lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-		          <div className="pb-4 lg:pb-0 overflow-hidden rounded-lg">
-		            <div className="w-full aspect-square bg-speaker2 bg-gray-400 bg-cover bg-top interactable" datatype='image'></div>
+		          <div className="pb-4 lg:pb-0 rounded-lg">
+		            <div className="w-full overflow-hidden aspect-square bg-gray-400 interactable" datatype='image'>
+			            <img src={speaker2} alt="" className='bg-top bg-cover'/>
+		            </div>
 		          </div>
 					<div className="grid grid-cols-1 gap-4 lg:gap-8">
-			          <div className="overflow-hidden rounded-lg block">
-				          <div className="w-full aspect-video lg:h-full bg-speaker3 bg-right bg-gray-400 bg-cover interactable" datatype='image'></div>
+			          <div className="rounded-lg">
+				          <div className="w-full overflow-hidden aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
+  				            <img src={speaker3} alt="" className='bg-right bg-cover'/>
+				          </div>
 			          </div>
 			          <div className="grid grid-cols-2 gap-4 lg:gap-8">
-			            <div className="overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-colonight-alt bg-gray-400 bg-cover interactable" datatype='image'></div>
+			            <div className="rounded-lg">
+			              <div className="w-full overflow-hidden aspect-square lg:aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
+			              	<img src={colonightAlt} alt="" className='bg-center bg-cover'/>
+			              </div>
 			            </div>
-			            <div className="overflow-hidden rounded-lg">
-			              <div className="w-full aspect-square lg:aspect-video lg:h-full bg-entrage bg-gray-400 bg-cover interactable" datatype='image'></div>
+			            <div className="rounded-lg">
+			              <div className="w-full overflow-hidden aspect-square lg:aspect-video lg:h-full bg-gray-400 interactable" datatype='image'>
+			              	<img src={entrage} alt="" className='bg-center bg-cover'/>
+			              </div>
 			            </div>
 			          </div>
 					</div>

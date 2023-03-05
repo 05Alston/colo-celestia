@@ -8,14 +8,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         'colonight' : 'url("./src/assets/colonite.webp")',
-        'entrage' : 'url("./src/assets/entrage.webp")',
-        'speaker1' : 'url("./src/assets/speaker1.webp")',
-        'speaker2' : 'url("./src/assets/speaker2.webp")',
-        'speaker3' : 'url("./src/assets/speaker3.webp")',
-        'player' : 'url("./src/assets/player.webp")',
-        'robot' : 'url("./src/assets/robot.webp")',
-        'colonight-alt' : 'url("./src/assets/colonight.webp")',
-        'decor' : 'url("./src/assets/colosseumdbit.webp")',
       },
       fontFamily: {
         'WorkSans': 'Work Sans',
