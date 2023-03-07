@@ -1,5 +1,4 @@
 import React from 'react'
-import Poster from '../assets/arch-linux-poster.webp';
 import { BsPlay } from 'react-icons/bs';
 
 const VideoCard = ({ year, url, vid }) => {

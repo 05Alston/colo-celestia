@@ -12,13 +12,13 @@ import Web3 from '../assets/events/workshop/Web-3-Blockchain.webp';
 
 const Events = () => {
     const [loading, setLoading] = useState(true);
-    const [workshopDetails, setWorkshopDetails] = useState([]);
+    const [eventsDetails, setEventsDetails] = useState([]);
     useEffect(()=> {
         async function getDetails() {
             setLoading(true);
             window.scrollTo(0, 0);
-            let res = await axios.get('http://192.168.0.152:1337/api/events/?populate=*');
-            setWorkshopDetails(res.data.data);
+            let res = await axios.get('http://43.207.69.122:1337/api/events/?populate=*');
+            setEventsDetails(res.data.data);
             setLoading(false);
         }
         getDetails();
@@ -29,7 +29,7 @@ const Events = () => {
             <section className=" md:px-12 pb-20 max-w-[110rem] mx-auto">
                 <p className="px-6 md:px-0 text-5xl md:text-7xl font-black font-Oswald uppercase">Events</p>
                 <div className="container mx-auto grid place-items-center grid-cols-1 gap-8 mt-16 sm:gap-9 lg:gap-9 xl:mt-20 xl:gap-20 sm:grid-cols-2 lg:grid-cols-3">
-                    <EventCard 
+                    {/* <EventCard 
                         title={'Warli Workshop'} 
                         category={'Workshop'}
                         venue={'Mech Drawing Hall 1'}
@@ -124,33 +124,29 @@ const Events = () => {
                         team={null}
                         image={Finance} 
                         loading={false}
-                        />
-                    {/*{loading && (
+                        /> */}
+                    {loading && (
                         [...Array(7)].map((x, index)=>(
                             <EventCard key={index} loading={loading}/>))
                     )}
                     {!loading && (
-                        workshopDetails.map((workshop, index)=> (
+                        eventsDetails.map((event, index)=> (
                             <EventCard
                             key={index} 
-                            
-                            date={'10-11th March'}
-                            time={'10:00 am - 01:00 pm'}
-                            fee1={'₹50 per person'}
-                            fee2={null}
-                            team={null}
-
-                            title={workshop['attributes']['title']} 
-                            category={workshop['attributes']['category']['data']['attributes']['Name']}
-                            venue={workshop['attributes']['venue']}
-                            speaker={workshop['attributes']['speaker']}
-                            time={workshop['attributes']['date']}
-                            fee={workshop['attributes']['price']}
-                            image={`http://localhost:1337${workshop['attributes']['poster']['data']['attributes']['formats']['medium']['url']}`} 
+                            title={event['attributes']['title']} 
+                            category={event['attributes']['categories']['data'][0]['attributes']['Name']}
+                            venue={event['attributes']['venue']}
+                            speaker={event['attributes']['speaker']}
+                            date={event['attributes']['date']}
+                            time={event['attributes']['time']}
+                            fee1={event['attributes']['fee1']}
+                            fee2={event['attributes']['fee2']}
+                            team={event['attributes']['team']}
+                            image={`http://43.207.69.122:1337${event['attributes']['image']['data']['attributes']['formats']['medium']['url']}`}
                             loading={loading}
                             />
                         ))
-                    )}*/}
+                    )}
                 </div>
             </section>
             <Footer/>
