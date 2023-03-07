@@ -24,6 +24,7 @@ const Events = () => {
                   'Access-Control-Allow-Origin': '*',
                   'Content-Type': 'application/json',
                 }});
+                console.log(res)
             setEventsDetails(res.data.data);
             setLoading(false);
         }
