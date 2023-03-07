@@ -17,7 +17,13 @@ const Events = () => {
         async function getDetails() {
             setLoading(true);
             window.scrollTo(0, 0);
-            let res = await axios.get('http://43.207.69.122:1337/api/events/?populate=*');
+            let res = await fetch('https://43.207.69.122:1337/api/events/?populate=*', {
+                method: 'GET',
+                mode: 'cors',
+                headers: {
+                  'Access-Control-Allow-Origin': '*',
+                  'Content-Type': 'application/json',
+                }});
             setEventsDetails(res.data.data);
             setLoading(false);
         }
@@ -29,7 +35,7 @@ const Events = () => {
             <section className=" md:px-12 pb-20 max-w-[110rem] mx-auto">
                 <p className="px-6 md:px-0 text-5xl md:text-7xl font-black font-Oswald uppercase">Events</p>
                 <div className="container mx-auto grid place-items-center grid-cols-1 gap-8 mt-16 sm:gap-9 lg:gap-9 xl:mt-20 xl:gap-20 sm:grid-cols-2 lg:grid-cols-3">
-                    {/* <EventCard 
+                    <EventCard 
                         title={'Warli Workshop'} 
                         category={'Workshop'}
                         venue={'Mech Drawing Hall 1'}
@@ -124,7 +130,7 @@ const Events = () => {
                         team={null}
                         image={Finance} 
                         loading={false}
-                        /> */}
+                        />
                     {loading && (
                         [...Array(7)].map((x, index)=>(
                             <EventCard key={index} loading={loading}/>))
@@ -142,7 +148,7 @@ const Events = () => {
                             fee1={event['attributes']['fee1']}
                             fee2={event['attributes']['fee2']}
                             team={event['attributes']['team']}
-                            image={`http://43.207.69.122:1337${event['attributes']['image']['data']['attributes']['formats']['medium']['url']}`}
+                            image={`https://43.207.69.122:1337${event['attributes']['image']['data']['attributes']['formats']['medium']['url']}`}
                             loading={loading}
                             />
                         ))
