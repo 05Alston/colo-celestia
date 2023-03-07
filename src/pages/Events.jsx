@@ -17,7 +17,7 @@ const Events = () => {
         async function getDetails() {
             setLoading(true);
             window.scrollTo(0, 0);
-            let res = await fetch('/root/api/events/?populate=*', {
+            let res = await fetch('http://43.207.69.122:1337/api/events/?populate=*', {
                 method: 'GET',
                 mode: 'cors',
                 headers: {
@@ -148,7 +148,7 @@ const Events = () => {
                             fee1={event['attributes']['fee1']}
                             fee2={event['attributes']['fee2']}
                             team={event['attributes']['team']}
-                            image={`/root${event['attributes']['image']['data']['attributes']['formats']['medium']['url']}`}
+                            image={`http://43.207.69.122:1337${event['attributes']['image']['data']['attributes']['formats']['medium']['url']}`}
                             loading={loading}
                             />
                         ))
