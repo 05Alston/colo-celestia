@@ -39,8 +39,14 @@ module.exports = {
           'to': { transform: 'translate(-50%, -50%) rotate(360deg)' },
         },
         customBounce: {
-          '0%, 100%': { transform: 'translateY(-25%) rotate(-90deg)' },
-          '50%': { transform: 'translateY(0%) rotate(-90deg)' },
+          '0%, 100%': { transform: 'translateY(-25%) rotate(90deg)' },
+          '50%': { transform: 'translateY(0%) rotate(90deg)' },
+        },
+        flicker: {
+          '0%, 40%, 50%': { color: 'hsla(0,0%,100%,0)' },
+          '20%': { color: 'hsla(0,0%,100%,.3)' },
+          '60%': { color: 'hsla(0,0%,100%,.6)' },
+          '100%': { color: '#fff' }
         },
         buttonPop: {
           '0%': { transform: 'scale(1))' },
