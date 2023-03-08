@@ -9,6 +9,9 @@ import PaperMagic from '../assets/events/workshop/Paper-Magic.webp';
 import RoboWars from '../assets/events/workshop/Robo-Wars.webp';
 import Spark from '../assets/events/workshop/Spark-AR.webp';
 import Web3 from '../assets/events/workshop/Web-3-Blockchain.webp';
+import Art_Craft from '../assets/events/competitions/Art_Workshop.png';
+import Digital_Art from '../assets/events/competitions/Digital_Art_Exhibition.png';
+import Stock_Market from '../assets/events/competitions/Stock_Market.png';
 
 const Events = () => {
     const [loading, setLoading] = useState(true);

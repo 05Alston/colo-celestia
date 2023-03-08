@@ -11,6 +11,7 @@ import Kunal from '../assets/events/talks/KunalDani.webp';
 import Pravin from '../assets/events/talks/PravinPadwal.webp';
 import Vishwas from '../assets/events/talks/VishwasPatil.webp';
 import Sweta from '../assets/events/talks/Sweta.jpg';
+import Manasvi from '../assets/events/talks/Manasvi.jpeg';
 
 const Homepage = () => {
 	const [effect, setEffect] = useState(false);
@@ -33,10 +34,8 @@ const Homepage = () => {
 	// },[])
 	return (
 		<div className='text-slate-100 bg-space-bg relative z-0'>
-			{/* <div className='z-50'>
-				<Intro/>
-			</div> */}
-			{/*<Backdrop/>*/}
+			<Intro/>
+			<Backdrop/>
 			{/* Hero section */}
 			<section className="grid md:pb-20 justify-start md:place-items-end min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto relative">
 				<div className='md:px-12 sm:px-8 px-3'>
@@ -81,6 +80,7 @@ const Homepage = () => {
 						<Speaker name={'Pravin Kumar Padwal'} image={Pravin} domain={'Joint Comissioner of Police'} loading={false}/>
 						<Speaker name={'Kunal Dani'} image={Kunal} domain={'Entrepreneur'} loading={false}/>
 						<Speaker name={'Sweta Jhunjhunwala'} image={Sweta} domain={'Founder of Tulsipatra'} loading={false}/>
+						<Speaker name={'Manasvi Menon'} image={Manasvi} domain={'Vice President Business Development at a UN based organization'} loading={false}/>
 						{/*{loading && (
 							[...Array(7)].map((x, index)=>(
 								<Speaker key={index} loading={loading}/>))
