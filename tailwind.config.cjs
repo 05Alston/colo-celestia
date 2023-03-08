@@ -25,6 +25,7 @@ module.exports = {
       },
       aspectRatio: {
         '3/4': '3 / 4',
+        'videoVert': '9 / 16',
       },
       keyframes: {
         tear: {

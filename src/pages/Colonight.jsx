@@ -13,7 +13,7 @@ const Colonight = () => {
 					<p className="text-5xl sm:text-7xl font-black font-Oswald uppercase">Colo Night</p>
 					<p className="lg:pt-6 md:text-3xl text-xl">Hurry up! Time is running out.</p>
 					<p className="md:text-3xl text-xl">Don't wait, GET your ticket right now.</p>
-					<DateLoc date={"15th March"} location={"Kurla, Mumbai"}/>
+					<DateLoc date={"16th March"} location={"Kurla, Mumbai"}/>
 				</div>
 				<div className='hidden md:block'>
 					<TicketV/>

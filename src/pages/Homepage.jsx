@@ -3,7 +3,7 @@ import axios from 'axios';
 import { DateLoc, Speaker, Sponsor, Footer, Backdrop, Intro } from '../components';
 import { NavLink } from 'react-router-dom';
 import { HiChevronRight } from 'react-icons/hi';
-import teaser from '../assets/colosseum2023.mp4';
+import teaser from '../assets/colosseum2023-trailer.mp4';
 import Food from '../assets/sponsors/Food.webp';
 import Travel from '../assets/sponsors/Travel.webp';
 import Printer from '../assets/sponsors/Printers.jpg';
@@ -43,7 +43,7 @@ const Homepage = () => {
 				<div className='md:px-12 sm:px-8 px-3'>
 					<p className="text-5xl sm:text-7xl font-black font-Oswald uppercase">Celestia</p>
 					<p className="lg:py-6 md:text-3xl text-xl">Infinite opportunities, Endless horizons.</p>
-					<DateLoc date={"15th March"} location={"Kurla, Mumbai"}/>
+					<DateLoc date={"15th & 16th March"} location={"Kurla, Mumbai"}/>
 				</div>
 			</section>
 			{/* Throwback */}
@@ -67,10 +67,10 @@ const Homepage = () => {
 					</NavLink>
 				</div>
 				{/* Video */}
-				<div className='md:mt-20 md:mx-12 sm:mx-8 mx-3 md:w-[700px] w-11/12 aspect-video rounded-xl bg-gray-800 text-slate-50 bg-opacity-60 flex-grow interactable grid place-items-center' datatype='video'>
-					<video preload="true" autoPlay={true} muted={true} className='md:w-[700px] w-11/12 aspect-video rounded-xl' playsInline="" loop={true}>
+				<div className='md:mt-20 md:mx-12 sm:mx-8 mx-3 md:w-[300px] w-11/12 aspect-videoVert rounded-xl bg-gray-800 text-slate-50 bg-opacity-60 flex-grow interactable grid place-items-center' datatype='video'>
+					<video preload="true" autoPlay={true} muted={true} className='md:w-[300px] w-11/12 aspect-videoVert rounded-xl' playsInline="" loop={true}>
 				        <source src={teaser} type="video/mp4"/>
-						</video>
+                    </video>
 				</div>
 			</section>
 			{/* Featuring */}
