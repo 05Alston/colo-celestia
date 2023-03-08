@@ -34,8 +34,10 @@ const Homepage = () => {
 	// },[])
 	return (
 		<div className='text-slate-100 bg-space-bg relative z-0'>
-			<Intro/>
 			<Backdrop/>
+			<div className='z-40'>
+                <Intro/>
+            </div>
 			{/* Hero section */}
 			<section className="grid md:pb-20 justify-start md:place-items-end min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto relative">
 				<div className='md:px-12 sm:px-8 px-3'>
