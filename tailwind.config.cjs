@@ -21,7 +21,7 @@ module.exports = {
         'btn': 'cubic-bezier(.4,0,.2,1)',
       },
       colors: {
-        'space-bg': '#030405',
+        'space-bg': '#060607',
       },
       aspectRatio: {
         '3/4': '3 / 4',
@@ -37,6 +37,10 @@ module.exports = {
         },
         customSpin: {
           'to': { transform: 'translate(-50%, -50%) rotate(360deg)' },
+        },
+        customBounce: {
+          '0%, 100%': { transform: 'translateY(-25%) rotate(-90deg)' },
+          '50%': { transform: 'translateY(0%) rotate(-90deg)' },
         },
         buttonPop: {
           '0%': { transform: 'scale(1))' },

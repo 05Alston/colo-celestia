@@ -1,9 +1,10 @@
 import { React, useEffect } from 'react'
-import { Scene, Group, SphereGeometry, MeshStandardMaterial, Mesh, MathUtils, PointLight, PerspectiveCamera, WebGL1Renderer } from 'three';
+import { Scene, Group, SphereGeometry, MeshStandardMaterial, Mesh, MathUtils, PointLight, PerspectiveCamera, WebGL1Renderer, Color } from 'three';
 
 const Backdrop = () => {
     useEffect(()=>{
         const scene = new Scene();
+        scene.background = new Color( 0x060607 );
         const stars = new Group();
         const light = new PointLight(0xffffff, 100);
         const camera = new PerspectiveCamera(45, screen.availWidth / screen.availHeight);
