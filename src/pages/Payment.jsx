@@ -22,13 +22,13 @@ const Payment = () => {
                 <h1 className="text-3xl md:text-5xl font-bold">Checkout</h1>
             </div>
         </div>
-        {!loading && <div className="w-full border-t border-b border-gray-600 px-5 py-10">
+        {loading && <div className="w-full border-t border-b border-gray-600 px-5 py-10">
             <div className="w-full">
                 <div className="-mx-3 flex items-start flex-col md:flex-row">
                     <div className="px-3 md:w-7/12 lg:pr-10">
                         <div className="w-full mx-auto font-light border-b border-gray-600">
                             <div className="w-full flex items-center">
-                                <h6 className="font-semibold uppercase text-6xl pb-10">{details['attributes']['title']}</h6>
+                                <h6 className="font-semibold uppercase text-6xl pb-10">Event Name{details['attributes']['title']}</h6>
                             </div>
                             <div className="artboard max-w-[414px] h-auto mx-auto">
                                 <img src={`http://43.207.69.122:1337${details['attributes']['image']['data']['attributes']['formats']['medium']['url']}`}/>

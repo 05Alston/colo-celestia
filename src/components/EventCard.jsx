@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-const EventCard = ({ title, category, venue, date, time, fee1, fee2, team, image, loading }) => {
+const EventCard = ({ title, category, venue, date, time, fee1, fee2, team, desc, image, loading }) => {
     //TODO: Do something about the color of badges
     const [effect, setEffect] = useState(false);
     const navigate = useNavigate();
@@ -8,7 +8,7 @@ const EventCard = ({ title, category, venue, date, time, fee1, fee2, team, image
         switch(cat){
         case 'Workshop': return 'bg-sky-600'; break;
         case 'Talk': return 'bg-purple-600'; break;
-        case 'Competition': return 'bg-red-400'; break;
+        case 'Competitions': return 'bg-red-400'; break;
         }
     }
     return (
@@ -16,7 +16,7 @@ const EventCard = ({ title, category, venue, date, time, fee1, fee2, team, image
         {/* <figure className={`group-hover:opacity-0 w-full h-full opacity-100 pointer-events-none z-10 transition-all duration-200 bg-gray-800  ${loading ? 'animate-pulse' : ''}`}>
             <img src={`http://localhost:1337${image}`} alt="" className={`rounded-lg ${loading ? 'hidden' : 'block'}`} />
         </figure> */}
-        <figure className={`group-hover:opacity-0 w-full h-full opacity-100 pointer-events-none z-10 transition-all duration-200 bg-gray-800  ${loading ? 'animate-pulse' : ''}`}>
+        <figure className={`group-hover:opacity-0 w-full h-full opacity-100 pointer-events-none z-10 transition-all duration-200 bg-gray-800  ${loading ? 'animate-pulse' : ''} ${image == null ? 'hidden' : 'block'}`}>
             <img src={image} alt="" className={`rounded-lg min-h-full ${image == null ? 'hidden' : 'block'}`} />
         </figure>
         <div className={`p-8 flex flex-col flex-auto gap-2 items-start justify-between w-full h-full absolute`}>
@@ -32,6 +32,7 @@ const EventCard = ({ title, category, venue, date, time, fee1, fee2, team, image
                     <p className='text-sm font-medium pt-1'>Entry Fee: {fee1}</p>
                     <p className={`text-sm font-medium pt-1 ${fee2 == null ? 'hidden' : 'block'}`}>Entry Fee: {fee2}</p>
                     <p className={`text-sm font-medium pt-1 ${team == null ? 'hidden' : 'block'}`}>Team: {team} members</p>
+                    <p className={`text-sm font-medium pt-1 ${desc == null ? 'hidden' : 'block'}`}>Description: {desc}</p>
                 </div>
                 <button className='interactable btn bg-gray-900 gap-2 uppercase' datatype="link" onClick={() => {
                             setEffect(true);
