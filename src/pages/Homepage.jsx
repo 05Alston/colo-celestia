@@ -39,7 +39,7 @@ const Homepage = () => {
                 <Intro/>
             </div>
 			{/* Hero section */}
-			<section className="grid md:pb-20 justify-start md:place-items-end min-h-screen place-items-center pb-0 max-w-[110rem] mx-auto relative">
+			<section className="grid md:pb-20 justify-start md:place-items-end mt-60 place-items-center pb-0 max-w-[110rem] mx-auto relative">
 				<div className='md:px-12 sm:px-8 px-3'>
 					<p className="text-5xl sm:text-7xl font-black font-Oswald uppercase">Celestia</p>
 					<p className="lg:py-6 md:text-3xl text-xl">Infinite opportunities, Endless horizons.</p>

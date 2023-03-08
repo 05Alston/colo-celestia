@@ -35,6 +35,9 @@ module.exports = {
           '60%': { transform: 'translateY(10vh) rotate(5deg)' },
           'to': { transform: 'translateY(80vh) rotate(5deg)' },
         },
+        customSpin: {
+          'to': { transform: 'translate(-50%, -50%) rotate(360deg)' },
+        },
         buttonPop: {
           '0%': { transform: 'scale(1))' },
           '40%': { transform: 'scale(0.95)' },
