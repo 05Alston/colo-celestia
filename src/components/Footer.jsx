@@ -11,7 +11,7 @@ const Footer = () => {
       </div> 
       <div>
         <span className="uppercase opacity-50 mb-2 font-bold">Social</span> 
-        {*/ <div className="grid grid-flow-col text-4xl gap-8 mt-4">
+        {/* <div className="grid grid-flow-col text-4xl gap-8 mt-4">
           <button onCLick={()=>{window.location.href = ""}}>
             <FiInstagram/>
           </button>
@@ -21,7 +21,7 @@ const Footer = () => {
           <button onCLick={()=>{window.location.href = ""}}>
             <FiFacebook/>
           </button>
-        </div> /*}
+  </div> */}
       </div>
     </footer>
   )
