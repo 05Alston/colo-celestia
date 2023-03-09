@@ -12,6 +12,8 @@ import Pravin from '../assets/events/talks/PravinPadwal.webp';
 import Vishwas from '../assets/events/talks/VishwasPatil.webp';
 import Sweta from '../assets/events/talks/Sweta.jpg';
 import Manasvi from '../assets/events/talks/Manasvi.jpeg';
+import Suhva from '../assets/events/talks/Suhva.jpeg';
+
 
 const Homepage = () => {
 	const [effect, setEffect] = useState(false);
@@ -83,6 +85,8 @@ const Homepage = () => {
 						<Speaker name={'Kunal Dani'} image={Kunal} domain={'Entrepreneur'} loading={false}/>
 						<Speaker name={'Sweta Jhunjhunwala'} image={Sweta} domain={'Founder of Tulsipatra'} loading={false}/>
 						<Speaker name={'Manasvi Menon'} image={Manasvi} domain={'Vice President Business Development at a UN based organization'} loading={false}/>
+						<Speaker name={'Suhva Lama'} image={Suhva} domain={'Scientist at CSIR-National Environmental Engineering Research Institute'} loading={false}/>
+
 						{/*{loading && (
 							[...Array(7)].map((x, index)=>(
 								<Speaker key={index} loading={loading}/>))
@@ -115,6 +119,8 @@ const Homepage = () => {
 					</div>
 				</div>
 			</section>
+
+			
 			<Footer/>
 		</div>
 	)

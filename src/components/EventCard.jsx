@@ -34,7 +34,7 @@ const EventCard = ({ title, category, venue, date, time, fee1, fee2, team, desc,
                     <p className={`text-sm font-medium pt-1 ${team == null ? 'hidden' : 'block'}`}>Team: {team} members</p>
                     <p className={`text-sm font-medium pt-1 ${desc == null ? 'hidden' : 'block'}`}>Description: {desc}</p>
                 </div>
-                <button className='interactable btn bg-gray-900 gap-2 uppercase' datatype="link" onClick={() => {
+                <button className='interactable btn bg-gray-900 gap-2 uppercase mt-0' datatype="link" onClick={() => {
                             setEffect(true);
                             setTimeout(() => {
                                 window.location.href = "https://tinyurl.com/colosseum23workshoplink";
