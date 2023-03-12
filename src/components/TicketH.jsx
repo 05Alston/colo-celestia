@@ -14,9 +14,9 @@ const TicketH = () => {
 					<button onClick={() => {
 						setEffect(true);
 						setTimeout(() => {
-							navigate("/");
+							// navigate("/");
 						},1000)
-					}} onAnimationEnd={() => setEffect(false)}>
+					}}>
 						<div className='-mx-12 -rotate-90 whitespace-nowrap font-semibold text-center text-lg uppercase'>Buy Now</div>
 					</button>
 			</div>

@@ -12,6 +12,7 @@ import Web3 from '../assets/events/workshop/Web-3-Blockchain.webp';
 import Art_Craft from '../assets/events/competitions/Arts_Craft.webp';
 import Digital_Art from '../assets/events/competitions/Digital_Art_Competition.webp';
 import Stock_Market from '../assets/events/competitions/Stock_Market.webp';
+import CPL from '../assets/events/competitions/CPL.webp';
 
 const Events = () => {
     const [loading, setLoading] = useState(true);
@@ -209,11 +210,11 @@ const Events = () => {
                         venue={'Computer Centre'}
                         date={'15th March'}
                         time={'11:00 am - 01:00 pm'}
-                        fee1={'₹30 per person'}
+                        fee1={'₹50 per person'}
                         fee2={null}
                         team={'3 (2 coders + 1 manager)'}
                         desc={'The teams will be given a bug ridden code/problem statement. 3 teams with the highest scores win.'}
-                        image={null} 
+                        image={CPL} 
                         loading={false}
                         />
                     <EventCard

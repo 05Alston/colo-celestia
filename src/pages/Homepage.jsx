@@ -7,6 +7,7 @@ import teaser from '../assets/colosseum2023-trailer.mp4';
 import Food from '../assets/sponsors/Food.webp';
 import Travel from '../assets/sponsors/Travel.webp';
 import subSpon from '../assets/sponsors/subSpon.webp';
+import Edu from '../assets/sponsors/Education.webp';
 import Printer from '../assets/sponsors/Printers.jpg';
 import Kunal from '../assets/events/talks/KunalDani.webp';
 import Pravin from '../assets/events/talks/PravinPadwal.webp';
@@ -109,6 +110,7 @@ const Homepage = () => {
 					<Sponsor section={null} image={Travel} loading={false}/>
 					<Sponsor section={null} image={Printer} loading={false}/>
 					<Sponsor section={null} image={subSpon} loading={false}/>
+					<Sponsor section={null} image={Edu} loading={false}/>
 						{/*{loading && (
 							[...Array(8)].map((x, index)=>(
 								<Sponsor key={index} loading={loading}/>))
