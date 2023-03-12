@@ -22,7 +22,7 @@ const EventCard = ({ title, category, venue, date, time, fee1, fee2, team, desc,
         <div className={`p-8 flex flex-col flex-auto gap-2 items-start justify-between w-full h-full absolute`}>
             <div className="flex justify-between gap-4 items-center">
                 <h2 className="flex items-center gap-2 text-xl font-bold">{title}</h2>
-                {/*<div className={`badge text-white ${badgeColor(category)}`}>{category}</div>*/}
+                <div className={`badge text-white text-sm ${badgeColor(category)}`}>{category}</div>
             </div>
             <div className="h-full flex flex-col justify-between gap-4 items-start">
                 <div>

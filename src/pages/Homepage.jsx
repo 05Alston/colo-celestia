@@ -6,13 +6,14 @@ import { HiChevronRight } from 'react-icons/hi';
 import teaser from '../assets/colosseum2023-trailer.mp4';
 import Food from '../assets/sponsors/Food.webp';
 import Travel from '../assets/sponsors/Travel.webp';
+import subSpon from '../assets/sponsors/subSpon.webp';
 import Printer from '../assets/sponsors/Printers.jpg';
 import Kunal from '../assets/events/talks/KunalDani.webp';
 import Pravin from '../assets/events/talks/PravinPadwal.webp';
 import Vishwas from '../assets/events/talks/VishwasPatil.webp';
-import Sweta from '../assets/events/talks/Sweta.jpg';
-import Manasvi from '../assets/events/talks/Manasvi.jpeg';
-import Suhva from '../assets/events/talks/Suhva.jpeg';
+import Sweta from '../assets/events/talks/Sweta.webp';
+import Manasvi from '../assets/events/talks/Manasvi.webp';
+import Suhva from '../assets/events/talks/Suhva.webp';
 
 
 const Homepage = () => {
@@ -70,7 +71,7 @@ const Homepage = () => {
 				</div>
 				{/* Video */}
 				<div className='md:mt-20 md:mx-12 sm:mx-8 mx-3 md:w-[300px] w-11/12 aspect-videoVert rounded-xl bg-gray-800 text-slate-50 bg-opacity-60 flex-grow interactable grid place-items-center' datatype='video'>
-					<video preload="true" autoPlay={true} muted={true} className='md:w-[300px] w-11/12 aspect-videoVert rounded-xl' playsInline="" loop={true}>
+					<video preload="true" autoPlay={true} muted={true} className='max-w-10/12 aspect-videoVert rounded-xl' playsInline="" loop={true}>
 				        <source src={teaser} type="video/mp4"/>
                     </video>
 				</div>
@@ -107,6 +108,7 @@ const Homepage = () => {
 					<Sponsor section={null} image={Food} loading={false}/>
 					<Sponsor section={null} image={Travel} loading={false}/>
 					<Sponsor section={null} image={Printer} loading={false}/>
+					<Sponsor section={null} image={subSpon} loading={false}/>
 						{/*{loading && (
 							[...Array(8)].map((x, index)=>(
 								<Sponsor key={index} loading={loading}/>))

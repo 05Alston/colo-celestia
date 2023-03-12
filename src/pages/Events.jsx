@@ -9,9 +9,9 @@ import PaperMagic from '../assets/events/workshop/Paper-Magic.webp';
 import RoboWars from '../assets/events/workshop/Robo-Wars.webp';
 import Spark from '../assets/events/workshop/Spark-AR.webp';
 import Web3 from '../assets/events/workshop/Web-3-Blockchain.webp';
-import Art_Craft from '../assets/events/competitions/Art_Workshop.png';
-import Digital_Art from '../assets/events/competitions/Digital_Art_Exhibition.png';
-import Stock_Market from '../assets/events/competitions/Stock_Market.png';
+import Art_Craft from '../assets/events/competitions/Arts_Craft.webp';
+import Digital_Art from '../assets/events/competitions/Digital_Art_Competition.webp';
+import Stock_Market from '../assets/events/competitions/Stock_Market.webp';
 
 const Events = () => {
     const [loading, setLoading] = useState(true);
@@ -56,7 +56,7 @@ const Events = () => {
                     <EventCard 
                         title={'Spark AR Workshop'} 
                         category={'Workshop'}
-                        venue={'EXTC Lab 4'}
+                        venue={'Language lab ground floor'}
                         date={'13-14th March'}
                         time={'03:00 pm - 05:00 pm'}
                         fee1={'₹80 per person (CSI Member)'}
@@ -173,8 +173,8 @@ const Events = () => {
                         fee1={'₹50 per person'}
                         fee2={null}
                         team={'1'}
-                        desc={'The players will be given the same amount of virtual money the 3 players with the most profit at the end of the event win.'}
-                        image={null}
+                        desc={'The players will be given the same amount of virtual money. Top 3 players with the most profit at the end of the event win.'}
+                        image={Stock_Market}
                         loading={false}
                         />
                     <EventCard 
@@ -186,8 +186,8 @@ const Events = () => {
                         fee1={'₹30 per person'}
                         fee2={null}
                         team={'1'}
-                        desc={'The players have to make art based on a given theme and limited credit using an online AI platform(Dall-E). The top 3 players with the best art win.'}
-                        image={null} 
+                        desc={'The top 3 players with the best art win.'}
+                        image={Digital_Art} 
                         loading={false}
                         />
                     <EventCard
@@ -200,7 +200,7 @@ const Events = () => {
                         fee2={null}
                         team={'2-3'}
                         desc={'Out of the given items, the team to make the best art wins.'}
-                        image={null} 
+                        image={Art_Craft} 
                         loading={false}
                         />
                     <EventCard
@@ -212,12 +212,12 @@ const Events = () => {
                         fee1={'₹30 per person'}
                         fee2={null}
                         team={'3 (2 coders + 1 manager)'}
-                        desc={'The team will be decided through an auction system. The manager will get to auction 2 coders using given credits. The teams will be given a bug ridden code/problem statement. 3 teams with the highest scores win.'}
+                        desc={'The teams will be given a bug ridden code/problem statement. 3 teams with the highest scores win.'}
                         image={null} 
                         loading={false}
                         />
                     <EventCard
-                        title={'Treasure hunt '} 
+                        title={'Treasure hunt'} 
                         category={'Competitions'}
                         venue={'Campus'}
                         date={'16th March'}
@@ -225,7 +225,7 @@ const Events = () => {
                         fee1={'₹200 per team'}
                         fee2={null}
                         team={'4'}
-                        desc={'Teams will have to go through all the hints and clues to find the final object. The first two teams to find the objects win. We suggest 1 person each from all departments ;) (Mech, Extc, Tech, FE)'}
+                        desc={'Teams will have to go through all the hints and clues to find the final object. The first two teams to find the objects win.'}
                         image={null} 
                         loading={false}
                         />
