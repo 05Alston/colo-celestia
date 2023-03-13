@@ -7,7 +7,7 @@ const EventCard = ({ title, category, venue, date, time, fee1, fee2, team, desc,
     const badgeColor = cat => {
         switch(cat){
         case 'Workshop': return 'bg-sky-600'; break;
-        case 'Talk': return 'bg-purple-600'; break;
+        case 'Gaming': return 'bg-purple-600'; break;
         case 'Competitions': return 'bg-red-400'; break;
         }
     }

@@ -13,6 +13,11 @@ import Art_Craft from '../assets/events/competitions/Arts_Craft.webp';
 import Digital_Art from '../assets/events/competitions/Digital_Art_Competition.webp';
 import Stock_Market from '../assets/events/competitions/Stock_Market.webp';
 import CPL from '../assets/events/competitions/CPL.webp';
+import Treasure from '../assets/events/competitions/TreasureHunt.jpg';
+import Fifa from '../assets/events/gaming/FIFA.jpg';
+import PES from '../assets/events/gaming/PES.jpg';
+import Stumble from '../assets/events/gaming/StumbleGuys.jpg';
+import Valo from '../assets/events/gaming/Valo.jpg';
 
 const Events = () => {
     const [loading, setLoading] = useState(true);
@@ -227,11 +232,68 @@ const Events = () => {
                         fee2={null}
                         team={'4'}
                         desc={'Teams will have to go through all the hints and clues to find the final object. The first two teams to find the objects win.'}
-                        image={null} 
+                        image={Treasure} 
                         loading={false}
                         />
                 </div>
             </section>
+            {/*<section className=" md:px-12 pb-20 max-w-[110rem] mx-auto">
+                <p className="px-6 md:px-0 text-5xl md:text-7xl font-black font-Oswald uppercase">Gaming</p>
+                <div className="container mx-auto grid place-items-center grid-cols-1 gap-8 mt-16 sm:gap-9 lg:gap-9 xl:mt-20 xl:gap-20 sm:grid-cols-2 lg:grid-cols-3">
+                    <EventCard 
+                        title={'FIFA \'22'} 
+                        category={'Gaming'}
+                        venue={'TBD'}
+                        date={'15th-16th March'}
+                        time={'10:00 am - 05:00 pm'}
+                        fee1={'₹50 per person'}
+                        fee2={null}
+                        team={null}
+                        desc={'Prize Pool of ₹2000'}
+                        image={Fifa}
+                        loading={false}
+                        />
+                    <EventCard 
+                        title={'PES Mobile'} 
+                        category={'Gaming'}
+                        venue={'TBD'}
+                        date={'15th March'}
+                        time={'10:00 am - 05:00 pm'}
+                        fee1={'₹50 per person'}
+                        fee2={null}
+                        team={null}
+                        desc={'Prize Pool of ₹1000'}
+                        image={PES}
+                        loading={false}
+                        />
+                    <EventCard 
+                        title={'Valorant'} 
+                        category={'Gaming'}
+                        venue={'TBD'}
+                        date={'15th-16th March'}
+                        time={'10:00 am - 05:00 pm'}
+                        fee1={'₹250 per team'}
+                        fee2={null}
+                        team={null}
+                        desc={'Prize Pool of ₹2500'}
+                        image={Valo}
+                        loading={false}
+                        />
+                    <EventCard 
+                        title={'Stumble Guys'} 
+                        category={'Gaming'}
+                        venue={'TBD'}
+                        date={'15th March'}
+                        time={'02:00 pm onwards'}
+                        fee1={'₹30 per person'}
+                        fee2={null}
+                        team={null}
+                        desc={'Prize Pool of ₹750'}
+                        image={Stumble}
+                        loading={false}
+                        />
+                </div>
+            </section>*/}
             <Footer/>
         </div>
     )

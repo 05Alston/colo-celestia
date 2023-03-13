@@ -25,7 +25,7 @@ const Hamburger = ({ links, popupState, setPopupState }) => {
               ))}
               <li>
                 <NavLink to="/events">
-                  <button className={`interactable btn bg-gray-900 gap-2 ${effect && 'animate-buttonPop'}`} datatype="link" onClick={() => {setEffect(true);changeState;}} onAnimationEnd={() => setEffect(false)}>
+                  <button className={`interactable btn bg-gray-900 gap-2 ${effect && 'animate-buttonPop'}`} datatype="link" onClick={() => {setEffect(true);setPopupState(!popupState);}} onAnimationEnd={() => setEffect(false)}>
                     <HiChevronRight className='text-3xl aspect-square'/>
                     Get Tickets
                   </button>

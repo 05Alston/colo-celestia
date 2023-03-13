@@ -21,10 +21,10 @@ const Navbar = () => {
       'route':'/events',
       'title':'Events'
     },
-    {
-      'route':'/sponsors',
-      'title':'Sponsors'
-    },
+    // {
+    //   'route':'/sponsors',
+    //   'title':'Sponsors'
+    // },
     {
       'route':'/colonight',
       'title':'Colo Night'

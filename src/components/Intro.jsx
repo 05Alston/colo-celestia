@@ -12,10 +12,10 @@ const Intro = () => {
         <div className="h-screen w-full relative bg-gradient-to-b from-black to-transparent">
             <div className='w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
                 <div className='relative'>
-                <img src={Background} alt="" className='w-full brightness-[0.3] hidden md:block'/>
+                <img src={Background} alt="" className='w-full brightness-[0.3] block md:opacity-100 opacity-0'/>
                 <img src={Alien} alt="" className='h-[20vw] md:h-[12vw] z-20 absolute left-1/2 bottom-1/4 md:bottom-0 -translate-x-1/2 w-auto'/>
                 <div className='object-contain z-20 absolute right-[10vw] translate-x-0 -rotate-[5deg] w-[11vw] h-[7vw] bottom-[16.4vw] pt-20 -translate-y-1/2 animate-[flicker_3s_ease-in-out_infinite]'>
-                    <div className='w-full text-center py-[0.8vw] font-Oswald text-[1.4vw] screen font-bold'>Colosseum is now live</div>
+                    <div className='w-full text-center py-[0.8vw] font-Oswald text-[1.4vw] screen font-bold md:opacity-100 opacity-0'>Colosseum is now live</div>
                 </div>
                 </div>
             </div>
