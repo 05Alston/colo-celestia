@@ -5,7 +5,7 @@ import { DateLoc, TicketV, TicketH } from '../components';
 const Colonight = () => {
 	return (
 		<div className='w-full h-screen overflow-x-hidden bg-black text-gray-100'>
-			<div className='w-full h-screen bg-colonight absolute bg-center bg-cover blur-[5px]'></div>
+			<div className='w-full h-screen absolute bg-center bg-cover blur-[5px] bg-colonite'></div>
 			<div className='w-full h-screen bg-black opacity-40 absolute'></div>
             <div className={`${screen.availWidth > screen.availHeight ? 'h-[33vh]' : ''} w-full`}></div>
 			<section className="flex flex-col md:flex-row overflow-y-hidden md:px-12 sm:px-8 px-3 items-center justify-evenly min-h-screen max-w-[110rem] mx-auto relative">

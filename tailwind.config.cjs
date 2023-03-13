@@ -6,9 +6,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'colonight' : 'url("./src/assets/colonite.webp")',
-      },
       fontFamily: {
         'WorkSans': 'Work Sans',
         'Oswald': 'Oswald',
