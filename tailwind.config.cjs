@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Orbitron': 'Orbitron',
+        'Barrio': 'Barrio',
         'WorkSans': 'Work Sans',
         'Oswald': 'Oswald',
       },

@@ -15,7 +15,7 @@ const Intro = () => {
                 <img src={Background} alt="" className='w-full brightness-[0.3] block md:opacity-100 opacity-0'/>
                 <img src={Alien} alt="" className='h-[20vw] md:h-[12vw] z-20 absolute left-1/2 bottom-1/4 md:bottom-0 -translate-x-1/2 w-auto'/>
                 <div className='object-contain z-20 absolute right-[9.4vw] translate-x-0 w-[11vw] h-[7vw] bottom-[15.4vw] pt-20 -translate-y-1/2'>
-                    <div className='w-full text-center py-[0.8vw] px-[2px] font-Orbitron text-[1.2vw] glitch screen font-bold md:opacity-100 opacity-0 layers' datatype='COLOSSEUM IS NOW LIVE'>COLOSSEUM IS NOW LIVE</div>
+                    <div className='w-full text-center py-[0.8vw] px-[2px] font-Barrio text-[1.2vw] screen font-bold md:opacity-100 opacity-0 glitch' datatype='COLOSSEUM IS NOW LIVE'>COLOSSEUM IS NOW LIVE</div>
                 </div>
                 </div>
             </div>
